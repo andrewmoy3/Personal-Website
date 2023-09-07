@@ -46,7 +46,7 @@
       }
 
       &:hover {
-        color: #ffd700;
+        color: #b0d9c8;
 
         svg {
           opacity: 0;
@@ -98,7 +98,7 @@
 
     a.active {
       svg {
-        color: #ffd700;
+        color: #b0d9c8;
       }
     }
   }
@@ -124,7 +124,7 @@
 
       &:hover {
         .anchor-icon {
-          color: #ffd700;
+          color: #335477;
         }
       }
     }
@@ -152,6 +152,7 @@
       width: 100%;
       top: 0;
       left: 0;
+      // background: #181818;
       background: #181818;
       height: 100%;
       margin: 0;

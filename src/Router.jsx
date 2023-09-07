@@ -1,7 +1,10 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import App from "./App";
 import ErrorPage from "./ErrorPage";
 import Home from "./Home";
+import About from "./About";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
+import App from "./App";
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -9,10 +12,12 @@ const Router = () => {
       path: "/",
       element: <App />,
       errorElement: <ErrorPage />,
-    },
-    {
-      path: "/home",
-      element: <Home />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "About", element: <About /> },
+        { path: "Portfolio", element: <Portfolio /> },
+        { path: "Contact", element: <Contact /> },
+      ],
     },
   ]);
   return <RouterProvider router={router} />;
