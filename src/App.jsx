@@ -2,12 +2,20 @@
 import { Outlet } from "react-router-dom";
 import "./App.css";
 import Sidebar from "./Sidebar";
+import Home from "./Home";
+import About from "./About";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
 
 const App = () => {
   return (
     <>
       <Sidebar />
-      <Outlet />
+      <Home />
+      <About />
+      <Portfolio />
+      <Contact />
+      {/* <Outlet /> */}
     </>
   );
 };

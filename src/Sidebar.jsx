@@ -11,6 +11,11 @@ import {
   faClose,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
+import {
+  scrollToAbout,
+  scrollToContact,
+  scrollToProjects,
+} from "./scrollFunctions";
 
 const Sidebar = () => {
   const [showNav, setShowNav] = useState(false);
@@ -31,7 +36,7 @@ const Sidebar = () => {
           activeclassname="active"
           className="about-link"
           to="/about"
-          onClick={() => setShowNav(false)}
+          onClick={scrollToAbout}
         >
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
         </NavLink>
@@ -39,7 +44,7 @@ const Sidebar = () => {
           activeclassname="active"
           className="portfolio-link"
           to="/portfolio"
-          onClick={() => setShowNav(false)}
+          onClick={scrollToProjects}
         >
           <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
         </NavLink>
@@ -47,7 +52,7 @@ const Sidebar = () => {
           activeclassname="active"
           className="contact-link"
           to="/contact"
-          onClick={() => setShowNav(false)}
+          onClick={scrollToContact}
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>

@@ -1,9 +1,47 @@
 #home {
   position: relative;
-  top: 60px;
-  color: black;
+  /* top: 60px; */
+  color: #dedede;
+  height: 50%;
+  padding-top: 60px;
+  background-color: #181818;
 }
 
 #home h1 {
+  font-size: 60px;
   margin: 0;
+}
+
+#home button {
+  width: 150px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  background-color: #b0d9c8; /* Button background color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  margin: 5px; /* Add spacing between buttons */
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size */
+}
+
+#home button:hover {
+  background-color: #b0d9c8; /* Hover color */
+}
+
+#home #buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust the height as needed */
+}
+
+#home #content {
+  position: relative;
+  top: 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#home p {
+  font-size: 40px;
 }
