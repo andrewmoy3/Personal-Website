@@ -1,0 +1,59 @@
+/* Reset some default styles for the list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for the navigation bar */
+#navbar {
+  background-color: #181818; /* Background color for the navbar */
+  overflow: hidden; /* Hide overflowing elements */
+  width: 100%;
+  height: 600px;
+}
+
+/* Style for the list items (menu items) */
+#navbar li {
+  float: left; /* Float the list items to create a horizontal layout */
+  margin: 0 15px; /* Add some spacing between menu items */
+}
+
+a.about-link {
+  &:after {
+    content: "ABOUT";
+  }
+}
+
+a.contact-link {
+  &:after {
+    content: "CONTACT";
+  }
+}
+
+a.portfolio-link {
+  &:after {
+    content: "PORTFOLIO";
+  }
+}
+
+a.active {
+  svg {
+    color: #b0d9c8;
+  }
+}
+/* Style for the links in the menu */
+#navbar a {
+  text-decoration: none; /* Remove underlines from links */
+  color: white; /* Text color for the links */
+  font-weight: bold; /* Make the text bold */
+  padding: 10px 20px; /* Add padding to the links */
+  display: block; /* Display links as block elements to take up full width of list items */
+}
+
+/* Change link color when hovered over */
+#navbar a:hover {
+  background-color: #555; /* Background color on hover */
+  border-radius: 5px; /* Add rounded corners on hover */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}

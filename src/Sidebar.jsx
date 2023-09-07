@@ -16,8 +16,8 @@ const Sidebar = () => {
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <div className="nav-bar">
-      <Link className="logo" to="/" onClick={() => setShowNav(false)}></Link>
+    <div id="navbar">
+      {/* <Link className="logo" to="/" onClick={() => setShowNav(false)}></Link> */}
       <nav className={showNav ? "mobile-show" : ""}>
         <NavLink
           exact="true"
@@ -87,13 +87,13 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
-      <FontAwesomeIcon
+      {/* <FontAwesomeIcon
         onClick={() => setShowNav(true)}
         icon={faBars}
         color="#ffd700"
         size="3x"
         className="hamburger-icon"
-      />
+      /> */}
     </div>
   );
 };
