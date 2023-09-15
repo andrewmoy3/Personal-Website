@@ -42,6 +42,14 @@
   justify-content: space-evenly;
 }
 
-#home p {
+#home #hello {
+  display: flex;
+  text-align: left;
+
+  flex-direction: column;
+}
+
+#home #intro {
   font-size: 40px;
+  width: 30%;
 }

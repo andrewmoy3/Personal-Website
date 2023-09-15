@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import Home from "./Home";
 import About from "./About";
 import Portfolio from "./Portfolio";
-import Contact from "./Contact";
+// import Contact from "./Contact";
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
       <Home />
       <About />
       <Portfolio />
-      <Contact />
+      {/* <Contact /> */}
       {/* <Outlet /> */}
     </>
   );
