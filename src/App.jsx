@@ -10,10 +10,12 @@ import Portfolio from "./Portfolio";
 const App = () => {
   return (
     <>
-      <Sidebar />
-      <Home />
-      <About />
-      <Portfolio />
+      <div id="content">
+        <Sidebar />
+        <Home />
+        <About />
+        <Portfolio />
+      </div>
       {/* <Contact /> */}
       {/* <Outlet /> */}
     </>

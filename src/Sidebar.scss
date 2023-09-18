@@ -1,9 +1,11 @@
 #navbar {
   background: #181818;
-  width: 100%;
+  width: calc(100% - 80px);
   height: 60px;
   position: fixed;
-  top: 0;
+
+  // top: 40px;
+  // top: 0px;
   z-index: 3;
   // min-height: 500px;
 
