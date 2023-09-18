@@ -2,8 +2,21 @@
   background-color: #181818;
   color: #fcecc9;
   padding: 0;
+  margin: 0;
   text-align: center;
-  height: 50%;
+  height: 75%;
   position: relative;
-  /* top: 60px; */
+}
+
+#portfolio h1 {
+  padding: 0;
+  margin: 0;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#portfolio .line {
+  width: 75%;
 }

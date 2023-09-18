@@ -40,13 +40,39 @@ body {
   overflow: hidden;
 }
 #root {
-  min-width: 100%;
+  /* min-width: 100%; */
+  width: calc(100% - 80px);
+  height: calc(100vh - 80px);
+  /* max-width: 1280px; */
+  margin: 0;
+  border: #435c5f solid 40px;
+
+  /* background-color: #435c5f; */
+  position: fixed;
+  z-index: 0;
+  overflow: hidden;
+}
+#contentDiv {
+  width: 100%;
   height: 100vh;
   /* max-width: 1280px; */
   margin: 0;
   padding: 0px;
   background-color: #dedede;
   text-align: center;
+  /* padding: 40px; */
+  /* padding-left: 40px;
+  padding-right: 40px; */
+  /* background-color: #435c5f; */
+  position: relative;
+  z-index: 0;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  overflow-y: auto; /* Add a vertical scrollbar when content overflows */
+}
+#contentDiv::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
