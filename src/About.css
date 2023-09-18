@@ -43,8 +43,12 @@
   border-radius: 50%; /* Make it circular by setting border-radius to 50% */
 }
 
+<<<<<<< HEAD
 #about h1,
 h2 {
+=======
+#about h1 {
+>>>>>>> 45096b169b2b38610b4dc8ef30073d780ef67513
   color: #b0d9c8;
 }
 
