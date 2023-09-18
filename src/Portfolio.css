@@ -1,8 +1,9 @@
 #portfolio {
-  background-color: #202020;
+  background-color: #181818;
+  color: #fcecc9;
   padding: 0;
   text-align: center;
-  height: 25%;
+  height: 50%;
   position: relative;
   /* top: 60px; */
 }
