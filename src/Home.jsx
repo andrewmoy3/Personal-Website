@@ -7,8 +7,8 @@ const Home = () => {
       <div id="content">
         <div id="greeting">
           <div id="hello">
-            <h1>Hi,</h1>
-            <h1>I'm Andrew</h1>
+            <h2>Hello, I'm </h2>
+            <h1>Andrew</h1>
           </div>
           <div id="buttons">
             <button onClick={scrollToAbout}>About Me</button>

@@ -48,6 +48,23 @@ h2 {
   color: #b0d9c8;
 }
 
+#about h1 {
+  font-size: 3em;
+  font-weight: 300;
+}
+#about h2 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  font-weight: 200;
+}
+
 #about .line {
   width: 75%;
+}
+
+#detailDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
