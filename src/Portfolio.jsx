@@ -1,7 +1,24 @@
+import { useState } from "react";
 import Card from "./Card";
 import "./Portfolio.css";
 
 const Portfolio = () => {
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const clickFunc = (card) => {
+    const contentDiv = document.getElementById("contentDiv");
+    if (selectedCard) {
+      contentDiv.classList.add("expanded");
+      if (selectedCard.name == card.name) {
+        setSelectedCard(null);
+        contentDiv.classList.remove("expanded");
+      }
+    } else {
+      setSelectedCard(card);
+      contentDiv.classList.add("expanded");
+    }
+  };
+
   let cards = [];
   cards.push({
     name: "name1",
@@ -28,9 +45,11 @@ const Portfolio = () => {
             description={card.description}
             link={card.link}
             image={card.image}
+            isExpanded={selectedCard && selectedCard.name === card.name}
+            onClick={() => clickFunc(card)}
           />
         ))}
-      </div>{" "}
+      </div>
     </div>
   );
 };

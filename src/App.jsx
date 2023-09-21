@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import Home from "./Home";
 import About from "./About";
 import Portfolio from "./Portfolio";
-import TargetingCursor from "./Cursor";
+// import TargetingCursor from "./Cursor";
 // import Contact from "./Contact";
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
         <Home />
         <About />
         <Portfolio />
-        <TargetingCursor />
+        {/* <TargetingCursor /> */}
       </div>
       {/* <Contact /> */}
       {/* <Outlet /> */}

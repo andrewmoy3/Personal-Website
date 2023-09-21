@@ -1,52 +1,73 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Card.css";
 import PropTypes from "prop-types";
 
-const Card = ({ name, description, image }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
+const Card = ({ name, description, link, image, isExpanded, onClick }) => {
   const handleCardClick = () => {
-    const element = document.getElementById(name);
-    const rect = element.getBoundingClientRect();
+    onClick(document.getElementById(name));
+  };
 
+  useEffect(() => {
+    const card = document.getElementById(name);
     const window = document.getElementById("contentDiv");
+
+    const rect = card.getBoundingClientRect();
     const windowRect = window.getBoundingClientRect();
 
     // Get the size of the viewport
     const vw = window.clientWidth;
     const vh = windowRect.height;
-    console.log(vw, vh);
+    // console.log("vw: " + vw);
+    // console.log("vh: " + vh);
 
-    const elementWidth = rect.width;
-    const elementHeight = rect.height;
-    // Get the current position of the element
-    const currentX = -rect.left + vw / 2 - elementWidth / 2;
+    const cardWidth = rect.width;
+    const cardHeight = rect.height;
+    // console.log("cardWidth: " + cardWidth);
+    // console.log("cardHeight: " + cardHeight);
+
+    // Get the current position of the card
+    const currentX = -rect.left + vw / 2 - cardWidth / 2;
     // const currentY = rect.top - window.scrollTop;
     //go to top of window taking into account scroll position and clientHeight
-    const currentY = -rect.top + vh / 2 - elementHeight / 2;
+    const currentY = -rect.top + vh / 2 - cardHeight / 2;
 
-    console.log(currentX, currentY);
-    // Calculate scaling factors based on element and viewport sizes
-    const scaleX = vw / elementWidth / 2;
-    const scaleY = vh / elementHeight / 2;
-    console.log(scaleX, scaleY);
+    // console.log("left", rect.left);
+    // console.log("top", rect.top);
+    // Calculate scaling factors based on card and viewport sizes
+    const scaleX = vw / cardWidth / 1.2;
+    const scaleY = vh / cardHeight / 1.2;
 
-    // Update the custom properties with the current position
-    document.documentElement.style.setProperty(
-      "--start-x",
-      `calc(${currentX}px + 1em )`
-    );
-    // + ${vw / 2}px
-    document.documentElement.style.setProperty(
-      "--start-y",
-      `calc(${currentY}px + 1em )`
-    );
-    // + ${vh / 2}px
-    document.documentElement.style.setProperty("--scale-x", `${scaleX}`);
-    document.documentElement.style.setProperty("--scale-y", `${scaleY}`);
+    // console.log("currentX: " + currentX);
+    // console.log("currentY: " + currentY);
 
-    setIsExpanded(!isExpanded);
-  };
+    if (isExpanded) {
+      // Update the custom properties with the current position
+      document.documentElement.style.setProperty(
+        "--start-x",
+        `calc(${currentX}px + 1em )`
+      );
+      document.documentElement.style.setProperty(
+        "--start-y",
+        `calc(${currentY}px + 1em )`
+      );
+      document.documentElement.style.setProperty("--scale-x", `${scaleX}`);
+      document.documentElement.style.setProperty("--scale-y", `${scaleY}`);
+
+      // console.log(currentX, currentY);
+      //change z-index of the card to 10
+      card.style.zIndex = 10;
+      //change all elements with class card to zindex 1
+      const cards = document.getElementsByClassName("card");
+      for (const cd of cards) {
+        if (cd !== card) cd.style.zIndex = 1;
+      }
+
+      // window.classList.add("expanded");
+    }
+    //  else {
+    //   window.classList.remove("expanded");
+    // }
+  }, [isExpanded]);
 
   return (
     <div
@@ -70,7 +91,10 @@ const Card = ({ name, description, image }) => {
 Card.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  // isExpanded: PropTypes.bool.isRequired,
+  // clickFunc: PropTypes.func.isRequired,
 };
 
 export default Card;

@@ -75,6 +75,16 @@ body {
   display: none;
 }
 
+/* Set overflow-y to hidden when .expanded class is present */
+#contentDiv.expanded {
+  overflow-y: hidden;
+}
+
+/* Set overflow-y to auto when .expanded class is not present */
+#contentDiv:not(.expanded) {
+  overflow-y: auto;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
