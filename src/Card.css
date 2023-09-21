@@ -1,3 +1,10 @@
+:root {
+  --start-x: 0;
+  --start-y: 0;
+  --scale-x: 0;
+  --scale-y: 0;
+}
+
 /* Center the cards vertically and horizontally */
 .card-container {
   width: 75%;
@@ -13,14 +20,21 @@
 /* Define styles for the individual cards */
 .card {
   margin: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid #b0d9c8;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 300px; /* Adjust the maximum card width as needed */
+  /* max-width: 300px; Adjust the maximum card width as needed */
   width: 100%;
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
+  /* overflow: hidden; */
+  /* transition: transform 0.2s linear; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 20vh;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
 .card a {
@@ -34,11 +48,83 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Card content */
 .card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+  text-align: center;
+  transition: transform 0.8s linear;
+  transform-style: preserve-3d;
 }
 
+.card.expanded .card-content {
+  transform: translate(var(--start-x), var(--start-y)) rotateY(180deg)
+    scale(var(--scale-x), var(--scale-y));
+  transform-origin: middle;
+
+  /* transform: scale(var(--scale-x), var(--scale-y)); */
+  position: fixed;
+  /* top: var(--start-y); */
+  /* top: calc(-1 * (100vh - var(--start-y) + 50px)); */
+  /* left: var(--start-x); */
+  z-index: 100;
+}
+
+.card.expanded {
+  overflow: visible;
+}
+
+/* top: 10%;
+  left: 10%;
+  width: 80vw;
+  height: 80vh;
+   
+} */
+/* Position the front and back side */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.card-front {
+  background-color: #fcecc9;
+  color: black;
+}
+
+/* Style the back side */
+.card-back {
+  background-color: #fcecc9;
+  color: white;
+  transform: rotateY(180deg);
+}
+@keyframes expand {
+  from {
+    /* transform: transl(var(--start-x), var(--start-y)); */
+    transform: scale(1);
+  }
+  to {
+    /* transform: translate(100px, 100px); */
+    transform: scale(3);
+  }
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+/* 
 .card-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -50,17 +136,18 @@
   color: #555;
 }
 
+
 .card-link {
   display: inline-block;
   margin-top: 15px;
   text-decoration: none;
   color: #007bff;
   font-weight: bold;
-}
+} */
 
 /* Make the cards responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .card {
     max-width: 100%;
   }
-}
+} */

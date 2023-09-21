@@ -4,16 +4,16 @@ import "./Portfolio.css";
 const Portfolio = () => {
   let cards = [];
   cards.push({
-    name: "Spotlyte",
+    name: "name1",
     description: "description",
     image: "image",
-    link: "andrew-moy.com",
+    link: "https://andrew-moy.com",
   });
   cards.push({
     name: "Spotlyte",
     description: "description",
-    image: "image",
-    link: "andrew-moy.com",
+    image: "src/assets/spotlyte.png",
+    link: "https://spotlyteapp.com/",
   });
 
   return (

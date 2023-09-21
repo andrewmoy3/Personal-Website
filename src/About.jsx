@@ -8,7 +8,6 @@ const About = () => {
       <div id="about-content">
         <div id="descrip">
           <h2>About Me</h2>
-
           <p>
             Hello! My name is Andrew. I am a college student who enjoys
             problem-solving, working in a team, and learning as much as I can
@@ -24,7 +23,7 @@ const About = () => {
           </p>
         </div>
         <div className="headshot-container">
-          <img src="IMG_2112.JPG" alt="Headshot" />
+          <img src="src/assets/IMG_2112.JPG" alt="Headshot" />
         </div>
         <div id="details">
           <h2>Details</h2>
