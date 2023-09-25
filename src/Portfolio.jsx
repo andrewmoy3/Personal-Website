@@ -32,6 +32,12 @@ const Portfolio = () => {
     image: "src/assets/spotlyte.png",
     link: "https://spotlyteapp.com/",
   });
+  cards.push({
+    name: "SwatWorks Web Games",
+    description: "description",
+    image: "none",
+    link: "https://spotlyteapp.com/",
+  });
 
   return (
     <div id="portfolio">
@@ -50,6 +56,12 @@ const Portfolio = () => {
           />
         ))}
       </div>
+      {selectedCard && (
+        <div
+          className="background-overlay"
+          style={{ display: selectedCard ? "block" : "none" }}
+        ></div>
+      )}
     </div>
   );
 };

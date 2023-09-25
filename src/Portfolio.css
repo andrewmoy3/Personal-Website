@@ -22,3 +22,20 @@
 #portfolio .line {
   width: 75%;
 }
+
+/* Add this to your CSS */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Adjust the color and opacity as needed */
+  z-index: 1;
+  display: none; /* Initially, the overlay should be hidden */
+}
