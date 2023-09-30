@@ -34,14 +34,19 @@
   align-items: center;
   width: 20vw;
   height: 20vh;
+
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   /* z-index: 1; */
 }
 
 .card a {
   text-decoration: none;
-  color: #007bff;
+  color: #435c5f;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card:hover {
@@ -57,6 +62,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 
   padding: 0;
   text-align: center;
@@ -83,13 +89,13 @@
   /* z-index: 10; */
 }
 
-/* top: 10%;
-  left: 10%;
-  width: 80vw;
-  height: 80vh;
-   
-} */
-/* Position the front and back side */
+.card img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
 .card-front,
 .card-back {
   position: absolute;
@@ -97,6 +103,7 @@
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  border-radius: 5px;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -108,25 +115,114 @@
 /* Style the back side */
 .card-back {
   background-color: #fcecc9;
-  color: white;
+  color: black;
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden; /* Hide overflowing content */
 }
-@keyframes expand {
-  from {
-    /* transform: transl(var(--start-x), var(--start-y)); */
-    transform: scale(1);
-  }
-  to {
-    /* transform: translate(100px, 100px); */
-    transform: scale(3);
-  }
+.card-back h1 {
+  width: 75%;
+  white-space: nowrap;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  margin: 0.4em;
+  margin-bottom: 2px;
+  padding: 0;
+  color: #435c5f;
+  /* text-decoration: underline; */
+}
+.card-back h2 {
+  /* font: italic small-caps bold 16px/1.5 "Times New Roman", serif; */
+  font-variant: small-caps;
+  font-size: 6px;
+  color: #333;
+  align-self: flex-start;
+  padding: 0px;
+  margin: 0px;
+}
+.card-back p {
+  width: 75%;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.card-back #links {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: large;
+  align-self: center;
+  padding: 5px;
+  margin-right: 20px;
+  grid-row: 5; /* Place in row 5 */
+
+  /* align-self: flex-end; */
+  /* position: relative; */
+  /* bottom: -5em; */
+}
+.card-back a {
+  width: 75%;
+  font-size: 0.2em;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
-.card img {
+.card-back #detailsDiv {
   width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  height: 70%;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10px;
+  font-size: 5px;
 }
+.vertical-bar {
+  width: 2px; /* Adjust the width as needed */
+  height: 100%; /* Set the height to fill the container */
+  background-color: #435c5f; /* Set the background color as desired */
+  margin: 0 10px; /* Adjust the margin to control the space around the bar */
+}
+
+.card-back #projectContent {
+  /* display: flex; */
+  display: grid;
+  grid-template-rows: repeat(5, 1fr); /* Create 5 rows with equal height */
+  /* grid-gap: 10px; Add some gap between the rows and columns */
+  /* flex-direction: column;
+  justify-content: space-between; */
+  width: 100%;
+  height: 100%;
+}
+
+.card-back #descriptionDiv {
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+}
+.card-back #techContent {
+  grid-row: 3 / span 2; /* Place in row 1 and 2 */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-back #projectLine {
+  border: none; /* Remove the default horizontal line */
+  height: 1px; /* Set the height to create a line effect */
+  background-color: #435c5f; /* Set the color of the underline */
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+  width: 30%;
+}
+
+.card-back span {
+  padding: 5%;
+}
+
 /* 
 .card-title {
   font-size: 1.5rem;
@@ -154,3 +250,13 @@
     max-width: 100%;
   }
 } */
+@keyframes expand {
+  from {
+    /* transform: transl(var(--start-x), var(--start-y)); */
+    transform: scale(1);
+  }
+  to {
+    /* transform: translate(100px, 100px); */
+    transform: scale(3);
+  }
+}
