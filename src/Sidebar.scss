@@ -91,7 +91,7 @@
 
     a.contact-link {
       &:after {
-        content: "CONTACT";
+        content: "MISC";
       }
     }
 
@@ -101,11 +101,11 @@
       }
     }
 
-    a.active {
-      svg {
-        color: #b0d9c8;
-      }
-    }
+    // a.active {
+    //   svg {
+    //     color: #b0d9c8;
+    //   }
+    // }
   }
 
   ul {

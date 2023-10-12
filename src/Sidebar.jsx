@@ -1,69 +1,121 @@
 import "./Sidebar.scss";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faHome,
   faUser,
-  faEnvelope,
   faSuitcase,
-  faBars,
-  faClose,
   faCode,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
+  scrollToHome,
   scrollToAbout,
-  scrollToContact,
   scrollToProjects,
+  scrollToContact,
 } from "./scrollFunctions";
 
-const Sidebar = () => {
-  const [showNav, setShowNav] = useState(false);
+const Sidebar = ({ scrollY }) => {
+  const [activeSection, setActiveSection] = useState("home");
+  const homeRef = useRef(document.getElementById("home"));
+  const aboutRef = useRef(document.getElementById("about"));
+  const projectsRef = useRef(document.getElementById("portfolio"));
+  // const contactRef = useRef(document.getElementById("contact"));
+  useEffect(() => {
+    const sections = [
+      { id: "home", ref: homeRef },
+      { id: "about", ref: aboutRef },
+      { id: "portfolio", ref: projectsRef },
+      // { id: "contact", ref: contactRef },
+    ];
+    // console.log(scrollY);
+
+    for (var section of sections) {
+      // console.log(document.getElementById(section.id));
+      const targetPosition =
+        document.getElementById(section.id).getBoundingClientRect().top +
+        scrollY -
+        500;
+      if (scrollY >= targetPosition) {
+        setActiveSection(section.id);
+      }
+    }
+    // const handleScroll = () => {
+    //   const contentDiv = document.getElementById("contentDiv");
+    //   const sections = [
+    //     { id: "home", ref: homeRef },
+    //     { id: "about", ref: aboutRef },
+    //     { id: "projects", ref: projectsRef },
+    //     { id: "contact", ref: contactRef },
+    //   ];
+
+    //   if (contentDiv) {
+    //     const contentRect = contentDiv.getBoundingClientRect();
+    //     for (const section of sections) {
+    //       const { id, ref } = section;
+    //       const element = ref.current;
+    //       if (element) {
+    //         const rect = element.getBoundingClientRect();
+    //         if (
+    //           rect.top >= contentRect.top &&
+    //           rect.bottom <= contentRect.bottom
+    //         ) {
+    //           if (activeSection !== id) {
+    //             setActiveSection(id);
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // };
+
+    // window.addEventListener("scroll", handleScroll);
+
+    // return () => {
+    // window.removeEventListener("scroll", handleScroll);
+    // };
+  }, [scrollY]);
 
   return (
     <div id="navbar">
-      {/* <Link className="logo" to="/" onClick={() => setShowNav(false)}></Link> */}
-      <nav className={showNav ? "mobile-show" : ""}>
-        <NavLink
-          exact="true"
-          activeclassname="active"
-          to="/"
-          onClick={() => setShowNav(false)}
-        >
-          <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+      <nav>
+        <NavLink exact={true} activeClassName="active" onClick={scrollToHome}>
+          <FontAwesomeIcon
+            icon={faHome}
+            color={activeSection === "home" ? "#b0d9c8" : "#4d4d4e"}
+          />
         </NavLink>
         <NavLink
-          activeclassname="active"
+          activeClassName="active"
           className="about-link"
-          to="/about"
           onClick={scrollToAbout}
         >
-          <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+          <FontAwesomeIcon
+            icon={faUser}
+            color={activeSection === "about" ? "#b0d9c8" : "#4d4d4e"}
+          />
         </NavLink>
         <NavLink
-          activeclassname="active"
+          activeClassName="active"
           className="portfolio-link"
-          to="/portfolio"
           onClick={scrollToProjects}
         >
-          <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
+          <FontAwesomeIcon
+            icon={faSuitcase}
+            color={activeSection === "portfolio" ? "#b0d9c8" : "#4d4d4e"}
+          />
         </NavLink>
         <NavLink
-          activeclassname="active"
+          activeClassName="active"
           className="contact-link"
-          to="/contact"
           onClick={scrollToContact}
         >
-          <FontAwesomeIcon icon={faCode} color="#4d4d4e" />
+          <FontAwesomeIcon
+            icon={faCode}
+            color={activeSection === "contact" ? "#b0d9c8" : "#4d4d4e"}
+          />
         </NavLink>
-        <FontAwesomeIcon
-          onClick={() => setShowNav(false)}
-          icon={faClose}
-          color="#ffd700"
-          size="3x"
-          className="close-icon"
-        />
       </nav>
       <ul>
         <li>
@@ -74,7 +126,7 @@ const Sidebar = () => {
           >
             <FontAwesomeIcon
               icon={faLinkedin}
-              color="#4d4d4e"
+              color={activeSection === "contact" ? "#b0d9c8" : "#4d4d4e"}
               className="anchor-icon"
             />
           </a>
@@ -87,19 +139,12 @@ const Sidebar = () => {
           >
             <FontAwesomeIcon
               icon={faGithub}
-              color="#4d4d4e"
+              color={activeSection === "contact" ? "#b0d9c8" : "#4d4d4e"}
               className="anchor-icon"
             />
           </a>
         </li>
       </ul>
-      {/* <FontAwesomeIcon
-        onClick={() => setShowNav(true)}
-        icon={faBars}
-        color="#ffd700"
-        size="3x"
-        className="hamburger-icon"
-      /> */}
     </div>
   );
 };
