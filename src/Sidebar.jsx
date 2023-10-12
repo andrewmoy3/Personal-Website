@@ -9,6 +9,7 @@ import {
   faSuitcase,
   faBars,
   faClose,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
 import {
@@ -54,7 +55,7 @@ const Sidebar = () => {
           to="/contact"
           onClick={scrollToContact}
         >
-          <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faCode} color="#4d4d4e" />
         </NavLink>
         <FontAwesomeIcon
           onClick={() => setShowNav(false)}

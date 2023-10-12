@@ -10,16 +10,14 @@ const About = () => {
           <h2>About Me</h2>
           <p>
             Hello! My name is Andrew. I am a college student who enjoys
-            problem-solving, working in a team, and learning as much as I can
-            about the world. I love baseball and playing music. I have always
-            had a particular curiosity into how computers worked, which has led
-            me to study computer science.
-          </p>
-          <p>
-            This past summer, I have delved into full-stack web development, but
-            am eager to learn more about any field in the world of computer
-            science. I am currently searching for a software engineering
-            internship for the Summer of 2024.
+            problem-solving, playing baseball, and learning as much as I can
+            about the world. I have always had a particular curiosity into how
+            computers worked, which has led me to study computer science in
+            college.
+            <br></br>This past summer, I have delved into full-stack web
+            development, but am eager to learn more about any field in the world
+            of computer science. I am currently searching for a software
+            engineering internship for the Summer of 2024.
           </p>
         </div>
         <div className="headshot-container">

@@ -4,6 +4,7 @@
   height: 75%;
   padding: 0;
   position: relative;
+  overflow: hidden;
 }
 
 #profile {
@@ -21,12 +22,20 @@
   justify-content: space-evenly;
   align-items: flex-start;
   width: 100%;
+  font-size: 1em;
 }
 #descrip {
-  width: 25%;
+  width: 30%;
+  display: inline; /* Ensure text elements are inline */
+  height: 100%;
+}
+#about-content p {
+  font-size: clamp(0.5rem, 1vw + 0.25rem, 1.5rem);
+
+  height: 80%;
 }
 #details {
-  width: 25%;
+  width: 30%;
 }
 .headshot-container {
   display: flex;
@@ -45,7 +54,7 @@
 
 #about h1,
 h2 {
-  color: #b0d9c8;
+  color: #435c5f;
 }
 
 #about h1 {

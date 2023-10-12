@@ -1,7 +1,14 @@
+function scrollToHome() {
+  const contentDiv = document.getElementById("contentDiv");
+  const homeSection = document.getElementById("home");
+  const offset = 66; // Adjust this value as needed
+  const targetPosition =
+    homeSection.getBoundingClientRect().top + contentDiv.scrollTop - offset;
+  contentDiv.scrollTo({ top: targetPosition, behavior: "smooth" });
+}
 function scrollToAbout() {
   const contentDiv = document.getElementById("contentDiv");
   const aboutSection = document.getElementById("about");
-  console.log("UE");
   const offset = 66; // Adjust this value as needed
   const targetPosition =
     aboutSection.getBoundingClientRect().top + contentDiv.scrollTop - offset;
@@ -25,4 +32,4 @@ function scrollToContact() {
   contentDiv.scrollTo({ top: targetPosition, behavior: "smooth" });
 }
 
-export { scrollToAbout, scrollToProjects, scrollToContact };
+export { scrollToHome, scrollToAbout, scrollToProjects, scrollToContact };

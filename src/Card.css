@@ -5,6 +5,11 @@
   --scale-y: 0;
 }
 
+.card-whole {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Center the cards vertically and horizontally */
 .card-container {
   width: 75%;
@@ -145,12 +150,12 @@
   margin: 0px;
 }
 .card-back p {
-  width: 75%;
-  font-size: 1em;
+  width: 90%;
+  /* font-size: 0.35vw; */
+  font-size: 0.8em;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: flex-start;
+  text-align: left;
 }
 .card-back #links {
   display: flex;
@@ -200,14 +205,26 @@
 }
 
 .card-back #descriptionDiv {
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card-back #techContent {
+  grid-row: 4 / span 1; /* Place in row 1 and 2 */
   display: flex;
   flex-direction: column;
 }
-.card-back #techContent {
-  grid-row: 3 / span 2; /* Place in row 1 and 2 */
+.card-back #techs {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-back #techContent img {
+  width: 2em;
+  height: auto;
+  border-radius: 0px;
 }
 
 .card-back #projectLine {

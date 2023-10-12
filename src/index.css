@@ -41,11 +41,11 @@ body {
 }
 #root {
   /* min-width: 100%; */
-  width: calc(100% - 2em);
-  height: calc(100vh - 2em);
+  width: calc(100% - 2vw);
+  height: calc(100vh - 2vw);
   /* max-width: 1280px; */
   margin: 0;
-  border: #435c5f solid 1em;
+  border: #435c5f solid 1vw;
 
   /* background-color: #435c5f; */
   position: fixed;

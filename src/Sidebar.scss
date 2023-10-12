@@ -1,6 +1,6 @@
 #navbar {
   background: #181818;
-  width: calc(100% - 2em);
+  width: calc(100% - 2vw);
   height: 60px;
   position: fixed;
 
@@ -56,6 +56,9 @@
 
         &:after {
           opacity: 1;
+          bottom: 0;
+          left: 50%; /* Center the "after" element */
+          transform: translateX(-50%); /* Center horizontally */
         }
       }
 

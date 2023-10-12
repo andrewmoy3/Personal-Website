@@ -79,63 +79,69 @@ const Card = ({
   }, [isExpanded]);
 
   return (
-    <div
-      id={name}
-      className={`card ${isExpanded ? "expanded" : ""}`}
-      onClick={handleCardClick}
-    >
-      <div className="card-content">
-        <div className="card-front">
-          {/* Change Here */}
-          <img src={image} alt="img"></img>
-          {/*  */}
-        </div>
-        <div className="card-back">
-          {/* Change Here */}
-          <h1>{name}</h1>
-          {/* <hr id="projectLine"></hr> */}
+    <div className="card-whole">
+      <div
+        id={name}
+        className={`card ${isExpanded ? "expanded" : ""}`}
+        onClick={handleCardClick}
+      >
+        <div className="card-content">
+          <div className="card-front">
+            {/* Change Here */}
+            <img src={image} alt={name}></img>
+            {/*  */}
+          </div>
+          <div className="card-back">
+            {/* Change Here */}
+            <h1>{name}</h1>
+            {/* <hr id="projectLine"></hr> */}
 
-          <div id="detailsDiv">
-            <div className="vertical-bar"></div>
+            <div id="detailsDiv">
+              <div className="vertical-bar"></div>
 
-            <div id="projectContent">
-              <div id="descriptionDiv">
-                <h2>Description</h2>
-                <p>{description}</p>
-              </div>
-              <div id="techContent">
-                <h2>Technologies Used</h2>
-                <div id="techs">
-                  {technologies.map((technology, index) => (
-                    <span key={index}>{technology}</span>
-                  ))}
+              <div id="projectContent">
+                <div id="descriptionDiv">
+                  <h2>Description</h2>
+                  <p>{description}</p>
                 </div>
-              </div>
-              <div id="links">
-                <a
-                  href={github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Github
-                  <hr id="projectLine"></hr>
-                </a>
+                <div id="techContent">
+                  <h2>Technologies Used</h2>
+                  <div id="techs">
+                    {technologies.map((technology, index) => (
+                      <div key={index}>
+                        <span>{technology.name}</span>
+                        <img src={technology.image} alt={technology.name} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div id="links">
+                  <a
+                    href={github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Github
+                    <hr id="projectLine"></hr>
+                  </a>
 
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  View Site
-                  <hr id="projectLine"></hr>
-                </a>
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    View Site
+                    <hr id="projectLine"></hr>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div id="cardtitle">{name}</div>
     </div>
   );
 };
