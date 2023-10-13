@@ -2,6 +2,7 @@ import { useState } from "react";
 import Card from "./Card";
 import "./Portfolio.css";
 import airpool from "./Airpool.png";
+import spotlyte from "./assets/spotlyte.png";
 
 const Portfolio = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -56,7 +57,7 @@ const Portfolio = () => {
           "https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png",
       },
     ],
-    image: "./spotlyte.png",
+    image: spotlyte,
     link: "https://spotlyteapp.com/",
     github: "https://github.com/zzanehip/Spotlyte",
   });
