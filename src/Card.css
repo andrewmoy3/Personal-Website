@@ -37,12 +37,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* width: 280px;
+  height: 217px; */
   width: 20vw;
   height: 20vh;
 
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   /* z-index: 1; */
 }
+
+/* .card.expanded {
+  width: 40vw;
+} */
 
 .card a {
   text-decoration: none;

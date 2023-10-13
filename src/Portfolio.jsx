@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Card from "./Card";
 import "./Portfolio.css";
+import airpool from "./Airpool.png";
 
 const Portfolio = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -120,7 +121,7 @@ const Portfolio = () => {
           "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png",
       },
     ],
-    image: "./Airpool.png",
+    image: airpool,
     link: "https://airpool.sccs.swarthmore.edu/",
     github: "https://github.com/swat-sccs/airpool-v2",
   });
