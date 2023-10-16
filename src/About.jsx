@@ -1,5 +1,5 @@
 import "./About.css";
-import headshot from "./assets/IMG_2112.jpg";
+import headshot from "./assets/IMG_2112.JPG";
 
 const About = () => {
   return (
