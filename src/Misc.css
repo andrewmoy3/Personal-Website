@@ -1,0 +1,93 @@
+#misc {
+  color: black;
+  background-color: #fcecc9;
+  /* height: 75%; */
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+
+#misc-content {
+  height: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 1em;
+}
+#misc-content p {
+  font-size: clamp(0.5rem, 1vw + 0.25rem, 1.5rem);
+
+  height: 80%;
+}
+
+#misc h1 {
+  color: #435c5f;
+}
+#misc h2 {
+  color: white;
+}
+
+#misc h1 {
+  font-size: 3em;
+  font-weight: 300;
+}
+#misc h2 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+#misc .line {
+  width: 75%;
+}
+
+.miscGrid {
+  /* display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr); */
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.miscGridItem {
+  /* padding: 20px; */
+  color: white;
+  border: 1px solid #435c5f;
+  border-radius: 5px;
+  background-color: #181818;
+  height: 50%;
+  margin: 30px;
+  width: 30%;
+}
+
+/* #misc #courses {
+  grid-column: 2;
+}
+#misc #orgs {
+  grid-column: 4;
+}
+#misc #techs {
+  grid-column: 6;
+} */
+
+#misc .vertical-bar {
+  grid-row: 1 / span 5;
+  grid-column: 1;
+  width: 6px; /* Adjust the width as needed */
+  height: 100%; /* Set the height to fill the container */
+  background-color: #435c5f; /* Set the background color as desired */
+  margin: 0 10px; /* Adjust the margin to control the space around the bar */
+  align-self: center;
+  justify-self: center;
+}
+
+#misc ul {
+  padding: 0;
+}

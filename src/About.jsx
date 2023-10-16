@@ -1,4 +1,5 @@
 import "./About.css";
+import headshot from "./assets/IMG_2112.jpg";
 
 const About = () => {
   return (
@@ -21,7 +22,7 @@ const About = () => {
           </p>
         </div>
         <div className="headshot-container">
-          <img src="src/assets/IMG_2112.JPG" alt="Headshot" />
+          <img src={headshot} alt="Headshot" />
         </div>
         <div id="details">
           <h2>Details</h2>

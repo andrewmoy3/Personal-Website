@@ -4,7 +4,11 @@
   height: 60px;
   position: fixed;
 
-  z-index: 3;
+  z-index: 1000;
+
+  // a {
+  //   border: #b0d9c8 1px solid;
+  // }
 
   .logo {
     display: block;

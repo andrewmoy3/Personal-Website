@@ -1,35 +1,22 @@
 #contact {
-  background-color: #dedede;
+  color: black;
+  background-color: #fcecc9;
+  height: 75%;
   padding: 0;
-  text-align: center;
-  color: #000;
   position: relative;
-  /* top: 60px; */
-  height: 5%;
-  /* font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+#contact h1 {
+  font-size: 3em;
   font-weight: 300;
-  font-size: 16px; */
-  /* line-height: 30px; */
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
-/* Reset default margin and padding for the page */
-body {
-  margin: 0;
-  padding: 0;
+#contact h2 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  font-weight: 400;
 }
 
-/* Center the headshot */
-.headshot-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* Adjust the height as needed */
-}
-
-/* Style the circular headshot */
-.headshot-container img {
-  height: 80%; /* Set the height of the circular headshot */
-  width: auto; /* Set the width of the circular headshot */
-  border-radius: 50%; /* Make it circular by setting border-radius to 50% */
+#contact .line {
+  width: 75%;
 }

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import Card from "./Card";
 import "./Portfolio.css";
-import airpool from "./Airpool.png";
+import airpool from "./assets/Airpool.png";
 import spotlyte from "./assets/spotlyte.png";
+import asia from "./assets/asia.jpeg";
+import prisma from "./assets/prisma.png";
+import google from "./assets/google.webp";
 
 const Portfolio = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -40,11 +43,11 @@ const Portfolio = () => {
       },
       {
         name: "Google Cloud",
-        image: "./google.webp",
+        image: google,
       },
       {
         name: "Prisma",
-        image: "./prisma.png",
+        image: prisma,
       },
       {
         name: "Next.js",
@@ -97,7 +100,7 @@ const Portfolio = () => {
           "https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png",
       },
     ],
-    image: "./asia.jpeg",
+    image: asia,
     link: "https://history-game-dev---swatworks.web.app/",
     github: "https://github.com/andrewmoy3/SwatWorks-Web-Games/tree/main",
   });

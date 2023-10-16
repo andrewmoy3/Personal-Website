@@ -5,7 +5,9 @@ import Sidebar from "./Sidebar";
 import Home from "./Home";
 import About from "./About";
 import Portfolio from "./Portfolio";
+import Misc from "./Misc";
 import { useEffect, useState } from "react";
+import Contact from "./Contact";
 // import TargetingCursor from "./Cursor";
 // import Contact from "./Contact";
 
@@ -38,6 +40,7 @@ const App = () => {
         <Home />
         <About />
         <Portfolio />
+        <Misc />
         {/* <TargetingCursor /> */}
       </div>
       {/* <Contact /> */}

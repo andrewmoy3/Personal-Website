@@ -7,6 +7,7 @@ import {
   faUser,
   faSuitcase,
   faCode,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import {
@@ -21,12 +22,14 @@ const Sidebar = ({ scrollY }) => {
   const homeRef = useRef(document.getElementById("home"));
   const aboutRef = useRef(document.getElementById("about"));
   const projectsRef = useRef(document.getElementById("portfolio"));
+  const miscRef = useRef(document.getElementById("misc"));
   // const contactRef = useRef(document.getElementById("contact"));
   useEffect(() => {
     const sections = [
       { id: "home", ref: homeRef },
       { id: "about", ref: aboutRef },
       { id: "portfolio", ref: projectsRef },
+      { id: "misc", ref: miscRef },
       // { id: "contact", ref: contactRef },
     ];
     // console.log(scrollY);
@@ -113,7 +116,7 @@ const Sidebar = ({ scrollY }) => {
         >
           <FontAwesomeIcon
             icon={faCode}
-            color={activeSection === "contact" ? "#b0d9c8" : "#4d4d4e"}
+            color={activeSection === "misc" ? "#b0d9c8" : "#4d4d4e"}
           />
         </NavLink>
       </nav>
@@ -139,6 +142,19 @@ const Sidebar = ({ scrollY }) => {
           >
             <FontAwesomeIcon
               icon={faGithub}
+              color={activeSection === "contact" ? "#b0d9c8" : "#4d4d4e"}
+              className="anchor-icon"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="mailto:andrewmoy3@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={faEnvelope}
               color={activeSection === "contact" ? "#b0d9c8" : "#4d4d4e"}
               className="anchor-icon"
             />

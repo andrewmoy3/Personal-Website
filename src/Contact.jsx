@@ -1,11 +1,10 @@
-// import "./Contact.css";
+import "./Contact.css";
 
 const Contact = () => {
   return (
     <div id="contact">
-      <div className="headshot-container">
-        <img src="IMG_2112.JPG" alt="Headshot" />
-      </div>
+      <h1 id="contactHeader">Contact Me</h1>
+      <hr className="line"></hr>
     </div>
   );
 };
