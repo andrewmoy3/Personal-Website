@@ -23,6 +23,8 @@ const Misc = () => {
     "CSS",
     "MongoDB",
     "Firebase",
+    "Vite",
+    "Webpack",
   ];
   return (
     <div id="misc">
