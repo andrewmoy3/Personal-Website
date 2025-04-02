@@ -25,7 +25,7 @@ function scrollToProjects() {
 }
 function scrollToContact() {
   const contentDiv = document.getElementById("contentDiv");
-  const projectsSection = document.getElementById("contact");
+  const projectsSection = document.getElementById("misc");
   const offset = 100; // Adjust this value as needed
   const targetPosition =
     projectsSection.getBoundingClientRect().top + contentDiv.scrollTop - offset;

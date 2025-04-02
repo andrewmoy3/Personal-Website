@@ -25,7 +25,7 @@ const Home = () => {
         </div> */}
         <div id="intro">
           I'm a computer science and engineering student, <br></br>an aspiring
-          software engineer, and a student athlete.
+          professional, and a student athlete.
         </div>
       </div>
     </div>

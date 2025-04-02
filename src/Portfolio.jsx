@@ -67,7 +67,7 @@ const Portfolio = () => {
   cards.push({
     name: "SwatWorks Web Games",
     description:
-      "This project was created as part of a winter internship for a history professor at St. John's University during the winter of 2022-2023, as part of Swarthmore College's 'SwatWorks' program. A real-time multiplayer web interface was created to implement a set of educational game scripts designed by the professor. The implementation allows the professor to monitor the current status of each player and easily process actions. It was created with vanilla HTML, CSS, and JavaScript, but is currently being reworked with React and MongoDB.",
+      "This project was created as part of a winter internship for a history professor at St. John's University during the winter of 2022-2023, as part of Swarthmore College's 'SwatWorks' program. A real-time multiplayer web interface was created to implement a set of educational game scripts designed by the professor. The implementation allows the professor to monitor the current status of each player and easily process actions. It was created with vanilla HTML, CSS, and JavaScript, and was my first experience with web development.",
     technologies: [
       {
         name: "Firebase",
@@ -89,16 +89,6 @@ const Portfolio = () => {
         image:
           "https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png",
       },
-      {
-        name: "React",
-        image:
-          "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png",
-      },
-      {
-        name: "mongoDB",
-        image:
-          "https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png",
-      },
     ],
     image: asia,
     link: "https://history-game-dev---swatworks.web.app/",
@@ -107,7 +97,7 @@ const Portfolio = () => {
   cards.push({
     name: "Airpool",
     description:
-      "Airpool is a web app that was created by the Swarthmore College Computer Society to help Swarthmore students find people to carpool with to and from the Philadelphia airport. Its intention was to allow students to reduce the cost of ride-sharing services by splitting the cost with others. Its development was postponed by the COVID-19 pandemic, but is currently being reworked with hopes of being available by Christmas 2023.",
+      "Airpool is a web app that was created by the Swarthmore College Computer Society to help Swarthmore students find people to carpool with to and from the Philadelphia airport. Its intention was to allow students to reduce the cost of ride-sharing services by splitting the cost with others. ",
     technologies: [
       {
         name: "Next.js",

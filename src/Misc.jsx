@@ -6,25 +6,32 @@ const Misc = () => {
     "Computer Systems",
     "Embedded Systems",
     "Software Engineering",
+    "Operating Systems",
+    "Computing with Text",
+    "Computer Vision",
+    "Mobile Robotics",
     "Numerical Methods for Engineering",
+    "Differential Equations",
     "Linear Algebra",
     "Multivariable Calculus",
-    "Computer Aided Manufacturing",
   ];
   const organizations = [
-    "Varsity Baseball",
+    "Tau Beta Pi Engineering Honor Society (Vice-President)",
+    "Phi Beta Kappa Honor Society",
+    "Swarthmore College Varsity Baseball Team (Co-Captain)",
     "Swarthmore College Computer Society",
   ];
   const technologies = [
+    "Python",
+    "pandas",
+    "NumPy",
+    "SciPy",
+    "MATLAB",
+    "Git",
+    "SQL",
     "NodeJS",
-    "React",
-    "Express",
-    "HTML",
-    "CSS",
+    "React.js",
     "MongoDB",
-    "Firebase",
-    "Vite",
-    "Webpack",
   ];
   return (
     <div id="misc">
