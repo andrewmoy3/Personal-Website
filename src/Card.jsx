@@ -126,15 +126,17 @@ const Card = ({
                     <hr id="projectLine"></hr>
                   </a>
 
-                  <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    View Site
-                    <hr id="projectLine"></hr>
-                  </a>
+                  {link && (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      View Site
+                      <hr id="projectLine"></hr>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

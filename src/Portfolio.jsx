@@ -5,7 +5,12 @@ import airpool from "./assets/Airpool.png";
 import spotlyte from "./assets/spotlyte.png";
 import asia from "./assets/asia.jpeg";
 import prisma from "./assets/prisma.png";
+import python from "./assets/python.png";
 import google from "./assets/google.webp";
+import baseball from "./assets/swat_baseball.png";
+import opencv from "./assets/opencv.png";
+import pandas from "./assets/pandas.png";
+import bs from "./assets/bs.jpg";
 
 const Portfolio = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -26,6 +31,61 @@ const Portfolio = () => {
 
   let cards = [];
 
+  cards.push({
+    name: "Spray Chart Web Scraper",
+    description:
+      "This project involves a Python script that scrapes data from the game logs of Division 3 baseball teams to produce spray charts for each individual player. The spray charts are then used to analyze the player's hitting tendencies and can be used to help coaches make decisions about how to position their fielders. This project was inspired by my involvement with the Swarthmore College baseball team; Despite a season ending injury during my senior season, I wanted to find a way to contribute to the team without being on the field.",
+    technologies: [
+      {
+        name: "Python",
+        image: python,
+      },
+      {
+        name: "BeautifulSoup",
+        image: bs,
+      },
+      {
+        name: "Pandas",
+        image: pandas,
+      },
+      {
+        name: "OpenCV",
+        image: opencv,
+      },
+    ],
+    image: baseball,
+    github: "https://github.com/andrewmoy3/swat_spray_charts",
+  });
+  cards.push({
+    name: "SwatWorks Web Games",
+    description:
+      "This project was created as part of a winter internship for a history professor at St. John's University during the winter of 2022-2023, as part of Swarthmore College's 'SwatWorks' program. A real-time multiplayer web interface was created to implement a set of educational game scripts designed by the professor. The implementation allows the professor to monitor the current status of each player and easily process actions. It was created with vanilla HTML, CSS, and JavaScript, and was my first experience with web development.",
+    technologies: [
+      {
+        name: "Firebase",
+        image:
+          "https://user-images.githubusercontent.com/25181517/189716855-2c69ca7a-5149-4647-936d-780610911353.png",
+      },
+      {
+        name: "HTML",
+        image:
+          "https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png",
+      },
+      {
+        name: "CSS",
+        image:
+          "https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png",
+      },
+      {
+        name: "JavaScript",
+        image:
+          "https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png",
+      },
+    ],
+    image: asia,
+    link: "https://history-game-dev---swatworks.web.app/",
+    github: "https://github.com/andrewmoy3/SwatWorks-Web-Games/tree/main",
+  });
   cards.push({
     name: "Spotlyte",
     description:
@@ -65,36 +125,6 @@ const Portfolio = () => {
     github: "https://github.com/zzanehip/Spotlyte",
   });
   cards.push({
-    name: "SwatWorks Web Games",
-    description:
-      "This project was created as part of a winter internship for a history professor at St. John's University during the winter of 2022-2023, as part of Swarthmore College's 'SwatWorks' program. A real-time multiplayer web interface was created to implement a set of educational game scripts designed by the professor. The implementation allows the professor to monitor the current status of each player and easily process actions. It was created with vanilla HTML, CSS, and JavaScript, and was my first experience with web development.",
-    technologies: [
-      {
-        name: "Firebase",
-        image:
-          "https://user-images.githubusercontent.com/25181517/189716855-2c69ca7a-5149-4647-936d-780610911353.png",
-      },
-      {
-        name: "HTML",
-        image:
-          "https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png",
-      },
-      {
-        name: "CSS",
-        image:
-          "https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png",
-      },
-      {
-        name: "JavaScript",
-        image:
-          "https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png",
-      },
-    ],
-    image: asia,
-    link: "https://history-game-dev---swatworks.web.app/",
-    github: "https://github.com/andrewmoy3/SwatWorks-Web-Games/tree/main",
-  });
-  cards.push({
     name: "Airpool",
     description:
       "Airpool is a web app that was created by the Swarthmore College Computer Society to help Swarthmore students find people to carpool with to and from the Philadelphia airport. Its intention was to allow students to reduce the cost of ride-sharing services by splitting the cost with others. ",
@@ -122,7 +152,7 @@ const Portfolio = () => {
 
   return (
     <div id="portfolio">
-      <h1 id="portfolioHead">Portfolio</h1>
+      <h1 id="portfolioHead">Projects</h1>
       <hr className="line"></hr>
       <div className="card-container">
         {cards.map((card, index) => (
