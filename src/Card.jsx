@@ -110,7 +110,11 @@ const Card = ({
                     {technologies.map((technology, index) => (
                       <div key={index}>
                         <span>{technology.name}</span>
-                        <img src={technology.image} alt={technology.name} />
+                        <img
+                          src={technology.image}
+                          alt={technology.name}
+                          style={{ width: technology.width }}
+                        />
                       </div>
                     ))}
                   </div>

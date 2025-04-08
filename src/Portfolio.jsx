@@ -11,6 +11,9 @@ import baseball from "./assets/swat_baseball.png";
 import opencv from "./assets/opencv.png";
 import pandas from "./assets/pandas.png";
 import bs from "./assets/bs.jpg";
+import geothermal from "./assets/geothermal.png";
+import pulp from "./assets/pulp.png";
+import certara from "./assets/certara.png";
 
 const Portfolio = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -32,6 +35,23 @@ const Portfolio = () => {
   let cards = [];
 
   cards.push({
+    name: "Geoexchange System Optimization",
+    description:
+      "This project was designed as the senior thesis for Swarthmore College's engineering program. The goal of the project was to optimize Swarthmore's newly built geoexchange system to minimize energy use and cost. It involved the analysis of potential upgrades to building envelope, such as insulation and window replacement, to reduce heat leakages, thereby saving energy. Through the use of Python, integer linear programming, and the PuLP Python package, the most cost effective upgrades were identified and recommended to the school to be constructed. The project was designed in collaboration with the professors, administration, architects, and engineers involved with the 'To Zero By Thirty-Five' project. The project is still in progress, and the code, results, and final presentation will be made available at the end of the Spring 2025 semester.",
+    technologies: [
+      {
+        name: "Python",
+        image: python,
+      },
+      {
+        name: "PuLP",
+        image: pulp,
+      },
+    ],
+    image: geothermal,
+    github: "",
+  });
+  cards.push({
     name: "Spray Chart Web Scraper",
     description:
       "This project involves a Python script that scrapes data from the game logs of Division 3 baseball teams to produce spray charts for each individual player. The spray charts are then used to analyze the player's hitting tendencies and can be used to help coaches make decisions about how to position their fielders. This project was inspired by my involvement with the Swarthmore College baseball team; Despite a season ending injury during my senior season, I wanted to find a way to contribute to the team without being on the field.",
@@ -43,6 +63,7 @@ const Portfolio = () => {
       {
         name: "BeautifulSoup",
         image: bs,
+        width: "25px",
       },
       {
         name: "Pandas",
