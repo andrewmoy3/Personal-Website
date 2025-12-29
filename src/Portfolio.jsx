@@ -35,6 +35,43 @@ const Portfolio = () => {
   let cards = [];
 
   cards.push({
+    name: "Solar Power Generation Shape Analysis",
+    description: "",
+    technologies: [
+      {
+        name: "Python",
+        image: python,
+      },
+    ],
+    image: certara,
+    github: "",
+  });
+
+  cards.push({
+    name: "Statistical Analysis of Air Pollution Causes",
+    description: "",
+    technologies: [
+      {
+        name: "Python",
+        image: python,
+      },
+    ],
+    image: certara,
+    github: "",
+  });
+  cards.push({
+    name: "Multi-Label Classification of Chest X-Ray Images",
+    description: "",
+    technologies: [
+      {
+        name: "Python",
+        image: python,
+      },
+    ],
+    image: certara,
+    github: "",
+  });
+  cards.push({
     name: "Geoexchange System Optimization",
     description:
       "This project was designed as the senior thesis for Swarthmore College's engineering program. The goal of the project was to optimize Swarthmore's newly built geoexchange system to minimize energy use and cost. It involved the analysis of potential upgrades to building envelope, such as insulation and window replacement, to reduce heat leakages, thereby saving energy. Through the use of Python, integer linear programming, and the PuLP Python package, the most cost effective upgrades were identified and recommended to the school to be constructed. The project was designed in collaboration with the professors, administration, architects, and engineers involved with the 'To Zero By Thirty-Five' project. The project is still in progress, and the code, results, and final presentation will be made available at the end of the Spring 2025 semester.",
@@ -178,7 +215,7 @@ const Portfolio = () => {
       <div className="card-container">
         {cards.map((card, index) => (
           <Card
-            key={index} // Add a unique key prop, such as an ID, if available
+            key={index} // Add a unique key prop
             name={card.name}
             description={card.description}
             technologies={card.technologies}
