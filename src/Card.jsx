@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./Card.css";
 import PropTypes from "prop-types";
 
@@ -12,6 +12,7 @@ const Card = ({
   isExpanded,
   onClick,
 }) => {
+  const [hovered, setHovered] = useState(false);
   const handleCardClick = () => {
     onClick(document.getElementById(name));
   };
@@ -78,8 +79,14 @@ const Card = ({
     // }
   }, [isExpanded]);
 
+  const overflow = name.length > 32;
+
   return (
-    <div className="card-whole">
+    <div
+      className="card-whole"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       <div
         id={name}
         className={`card ${isExpanded ? "expanded" : ""}`}
@@ -147,7 +154,7 @@ const Card = ({
           </div>
         </div>
       </div>
-      <div id="cardtitle">{name}</div>
+      <CardTitle name={name} hoveredProp={hovered} />
     </div>
   );
 };
@@ -162,3 +169,43 @@ Card.propTypes = {
 };
 
 export default Card;
+
+function CardTitle({ name, hoveredProp }) {
+  const spanRef = useRef(null);
+  const containerRef = useRef(null);
+  const widthLockedRef = useRef(false);
+
+  const MAX = 32;
+  const overflow = name.length > MAX;
+
+  function clampTitle(s, n) {
+    if (s.length <= n) return s;
+    return s.slice(0, n).trimEnd() + "…";
+  }
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    if (!spanRef.current) return;
+    if (widthLockedRef.current) return;
+    if (hoveredProp) return;
+
+    const w = spanRef.current.offsetWidth;
+    containerRef.current.style.width = `${w}px`;
+    widthLockedRef.current = true;
+  }, [hoveredProp]);
+
+  const displayText = !hoveredProp && overflow ? clampTitle(name, MAX) : name;
+
+  return (
+    <div id="cardtitle" ref={containerRef}>
+      <span
+        ref={spanRef}
+        className={`cardtitle-text ${
+          overflow && hoveredProp ? "scrollable" : ""
+        }`}
+      >
+        {displayText}
+      </span>
+    </div>
+  );
+}
