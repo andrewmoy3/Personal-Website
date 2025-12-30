@@ -5,12 +5,13 @@
   --scale-y: 0;
 }
 
-.card-whole {
+.card-whole,
+.card-placeholder {
   display: flex;
   flex-direction: column;
 }
 
-/* Define styles for the individual cards */
+/* General card styling */
 .card {
   margin: 0;
   padding: 0;
@@ -18,25 +19,15 @@
   border: 1px solid #b0d9c8;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* max-width: 300px; Adjust the maximum card width as needed */
-  width: 100%;
-  /* overflow: hidden; */
-  /* transition: transform 0.2s linear; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 280px;
-  height: 217px; */
-  width: 20vw;
-  height: 20vh;
+  height: 100%;
+  width: 100%;
 
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   /* z-index: 1; */
 }
-
-/* .card.expanded {
-  width: 40vw;
-} */
 
 .card a {
   text-decoration: none;
@@ -46,20 +37,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-#cardtitle {
-  transition: transform 0.25s ease;
-}
-.card-whole:hover .card {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-}
-.card-whole:hover #cardtitle {
-  transform: scale(1.2);
 }
 
 .card-content {
@@ -78,6 +55,7 @@
   transform-style: preserve-3d;
 }
 
+/* Animation when you expand a card */
 .card.expanded .card-content {
   transform: translate(var(--start-x), var(--start-y)) rotateY(180deg)
     scale(var(--scale-x), var(--scale-y));
@@ -97,6 +75,22 @@
   /* z-index: 10; */
 }
 
+/* Animations when you hover over a card */
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+#cardtitle {
+  transition: transform 0.25s ease;
+}
+.card-whole:hover .card {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+.card-whole:hover #cardtitle {
+  transform: scale(1.2);
+}
+
+/* Scrolling Card Title */
 #cardtitle {
   overflow: hidden;
   white-space: nowrap;
@@ -108,7 +102,7 @@
   display: inline-block;
 }
 .card-whole:hover .scrollable {
-  animation: scroll-title 6s linear infinite;
+  animation: scroll-title 3s linear infinite;
 }
 .cardtitle-text {
   font-size: 0.8em;
@@ -140,6 +134,7 @@
   }
 }
 
+/* Front/Back of the card */
 .card img {
   width: 100%;
   height: 100%;
@@ -292,31 +287,3 @@
 .card-back span {
   padding: 5%;
 }
-
-/* 
-.card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.card-description {
-  font-size: 1rem;
-  color: #555;
-}
-
-
-.card-link {
-  display: inline-block;
-  margin-top: 15px;
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-} */
-
-/* Make the cards responsive */
-/* @media (max-width: 768px) {
-  .card {
-    max-width: 100%;
-  }
-} */

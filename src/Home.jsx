@@ -13,19 +13,12 @@ const Home = () => {
           <div id="buttons">
             <button onClick={scrollToAbout}>About Me</button>
             <button onClick={scrollToProjects}>My Projects</button>
+            {/* href="https://andrewmoy.georgetown.domains/" */}
           </div>
         </div>
-        {/* <div id="intro">
-          I'm a computer science and engineering student, <br></br>a student
-          athlete,<br></br>and an aspiring software engineer.
-        </div>
         <div id="intro">
-          I'm a student athlete at Swarthmore college <br></br>
-          and an aspiring software engineer.
-        </div> */}
-        <div id="intro">
-          I'm a computer science and engineering student, <br></br>an aspiring
-          professional, and a student athlete.
+          I'm a data science graduate student at Georgetown University
+          specializing in artificial intelligence and machine learning.
         </div>
       </div>
     </div>

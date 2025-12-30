@@ -30,13 +30,32 @@
   height: 100%;
 }
 #about-content p {
-  font-size: clamp(0.5rem, 1vw + 0.25rem, 1.5rem);
+  /* font-size: clamp(0.5rem, 1vw + 0.25rem, 1.5rem); */
+  font-size: 1em;
 
   height: 80%;
 }
+
 #details {
   width: 30%;
 }
+#detailDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.6rem;
+  align-items: start;
+}
+
+.detail-value {
+  text-align: left;
+}
+
 .headshot-container {
   display: flex;
   justify-content: center;

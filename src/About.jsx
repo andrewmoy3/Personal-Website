@@ -11,15 +11,16 @@ const About = () => {
           <h2>About Me</h2>
           <p>
             Hello! My name is Andrew. I am a first year graduate student at
-            Georgetown University pursuing a Master's degree in Data Science and
-            Analytics with a concentration in Artificial Intelligence. I
-            graduated from Swarthmore College in May 2025 with a B.S. in
-            Engineering and a B.A. in Computer Science.
+            Georgetown University. I graduated from Swarthmore College in May
+            2025 with a B.S. in Engineering and a B.A. in Computer Science, and
+            expect to graduate from Georgetown in December 2026.
             <br></br>
-            My expected graduation date from Georgetown is in December 2026. I
-            am currently looking for internship opportunities as a data
-            scientist, machine learning engineer, or artificial intelligence
-            engineer for the summer of 2026.
+            <br></br> I have particular interest in machine learning
+            applications in the renewable energy field, which many of my recent
+            projects have focused on. I am currently looking for internship
+            opportunities in New York City as a data scientist, machine learning
+            engineer, or artificial intelligence engineer for the summer of
+            2026.
           </p>
         </div>
         <div className="headshot-container">
@@ -28,13 +29,32 @@ const About = () => {
         <div id="details">
           <h2>Details</h2>
           <div id="detailDiv">
-            <div className="detail">Age: 22</div>
-            <div className="detail">Home: New York</div>
-            <div className="detail">School: Georgetown University</div>
-            <div className="detail">Year: First Year Graduate Student</div>
             <div className="detail">
-              Major: Data Science and Analytics (Artificial Intelligence
-              Concentration)
+              <span className="detail-label">Age:</span>
+              <span className="detail-value">22</span>
+            </div>
+            <div className="detail">
+              <span className="detail-label">Home:</span>
+              <span className="detail-value">New York</span>
+            </div>
+            <div className="detail">
+              <span className="detail-label">School:</span>
+              <span className="detail-value">Georgetown University</span>
+            </div>
+            <div className="detail">
+              <span className="detail-label">Year:</span>
+              <span className="detail-value">First Year Master's Student</span>
+            </div>
+            <div className="detail">
+              <span className="detail-label">Major:</span>
+              <span className="detail-value">
+                Data Science and Analytics (Artificial Intelligence
+                Concentration)
+              </span>
+            </div>
+            <div className="detail">
+              <span className="detail-label">Expected Graduation:</span>
+              <span className="detail-value">December 2026</span>
             </div>
           </div>
         </div>

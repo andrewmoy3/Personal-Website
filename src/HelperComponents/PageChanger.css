@@ -1,0 +1,47 @@
+.arrow,
+.arrow-placeholder {
+  width: 10%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  position: relative;
+  box-shadow: none;
+
+  cursor: pointer;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.arrow:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #fcecc9;
+  border-bottom: 2px solid #fcecc9;
+  transform-origin: center;
+}
+
+.arrow.left::before {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.arrow.right::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.arrow:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.arrow:active {
+  transform: scale(0.95);
+}
