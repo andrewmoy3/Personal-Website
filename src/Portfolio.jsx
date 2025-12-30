@@ -39,7 +39,9 @@ const Portfolio = () => {
           <div
             className="cards"
             style={{
-              transform: `translateX(-${selectedGroup * 100}%)`,
+              transform: `translateX(calc(-${selectedGroup * 100}% - ${
+                2 * selectedGroup
+              }rem + ${2 * selectedGroup}px))`,
             }}
           >
             {cards.map((card, index) => (
