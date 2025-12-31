@@ -96,7 +96,6 @@ const Card = ({
           <div className="card-front">
             {/* Change Here */}
             <img src={image} alt={name}></img>
-            {/*  */}
           </div>
           <div className="card-back">
             {/* Change Here */}
@@ -168,8 +167,6 @@ Card.propTypes = {
   // clickFunc: PropTypes.func.isRequired,
 };
 
-export default Card;
-
 function CardTitle({ name, hoveredProp }) {
   const spanRef = useRef(null);
   const containerRef = useRef(null);
@@ -209,3 +206,14 @@ function CardTitle({ name, hoveredProp }) {
     </div>
   );
 }
+
+const PlaceHolderCard = () => (
+  <div className="card placeholder-card">
+    <div className="card-content">
+      <div className="card-front placeholder-front"></div>
+      <div className="card-back placeholder-back"></div>
+    </div>
+  </div>
+);
+
+export { Card, PlaceHolderCard };

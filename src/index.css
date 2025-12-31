@@ -52,6 +52,7 @@ body {
   z-index: 0;
   overflow: hidden;
 }
+
 #contentDiv {
   width: 100%;
   height: 100vh;
@@ -70,6 +71,7 @@ body {
   scrollbar-width: none; /* Firefox */
 
   overflow-y: auto; /* Add a vertical scrollbar when content overflows */
+  overflow-x: hidden;
 }
 #contentDiv::-webkit-scrollbar {
   display: none;

@@ -30,18 +30,19 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
+  z-index: 5;
   display: none;
 }
 
-/* Page Controls (arrows around cards) */
+/* Page Controls (arrows around cards and viewport) */
 .page-controls {
   display: flex;
   align-items: center;
-  width: 90%;
+  justify-content: center;
+
+  width: 100%;
   height: 70%;
   margin: 1rem auto;
-  z-index: 3;
   position: relative;
 }
 
@@ -52,23 +53,35 @@
   grid-auto-flow: column;
   /* grid-auto-columns: 100%; */
   width: 100%;
-  grid-auto-columns: calc((100% - 4rem - 2px) / 3);
+  grid-auto-columns: calc((100% - 4rem - 2px - 2rem) / 3);
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
   height: calc(100% - 2rem);
   transition: transform 1s ease;
   position: absolute;
+  padding: 1rem;
 }
 .viewport {
-  width: 100%;
+  width: 65%;
   height: 100%;
-  z-index: 2;
-  overflow: hidden;
+  z-index: 3;
+  /* overflow: hidden; */
   position: relative;
 }
 
-/* .page-changer {
+.mask-left,
+.mask-right {
+  background-color: #181818;
   z-index: 4;
   position: relative;
-  background-color: red;
-} */
+  height: 100%;
+  flex: 1;
+}
+
+.page-changer {
+  z-index: 4;
+  width: 5%;
+  height: 100%;
+  position: relative;
+  background-color: #181818;
+}

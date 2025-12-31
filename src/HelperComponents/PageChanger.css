@@ -1,20 +1,19 @@
 .arrow,
 .arrow-placeholder {
-  width: 10%;
-  height: 100%;
-  background: none;
+  /* background: none; */
   border: none;
+  border-radius: 0%;
   outline: none;
   position: relative;
   box-shadow: none;
 
   cursor: pointer;
-  opacity: 0.7;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  /* opacity: 0.7; */
+  /* transition: transform 0.2s ease, opacity 0.2s ease; */
 }
 .arrow:focus {
   outline: none;
-  box-shadow: none;
+  /* box-shadow: 12px 12px 24px rgba(100, 108, 255, 0.6); */
 }
 
 .arrow::before {
@@ -37,11 +36,11 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.arrow:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
+/* .arrow:hover { */
+/* opacity: 1; */
+/* transform: scale(1.1); */
+/* } */
 
-.arrow:active {
-  transform: scale(0.95);
-}
+/* .arrow:active { */
+/* transform: scale(1.05); */
+/* } */

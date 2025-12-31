@@ -72,7 +72,6 @@
 .card.expanded {
   overflow: visible;
   border: none;
-  /* z-index: 10; */
 }
 
 /* Animations when you hover over a card */
@@ -83,6 +82,8 @@
   transition: transform 0.25s ease;
 }
 .card-whole:hover .card {
+  z-index: 10;
+  position: relative;
   transform: scale(1.05) translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
@@ -167,6 +168,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  z-index: 5;
+  /* position: relative; */
   overflow: hidden; /* Hide overflowing content */
 }
 .card-back h1 {
