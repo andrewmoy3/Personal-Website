@@ -78,7 +78,6 @@
   transition: transform 0.25s ease;
 }
 .card-whole:hover .card {
-  /* z-index: 10; */
   position: relative;
   transform: scale(1.05) translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
@@ -92,6 +91,7 @@
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
+  padding-bottom: 5%;
   text-align: center;
   /* max-width: fit-content; */
 }
