@@ -57,14 +57,14 @@
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
   height: calc(100% - 2rem);
-  transition: transform 1s ease;
-  position: absolute;
+  transition: left 1s ease;
+  position: relative;
   padding: 1rem;
 }
 .viewport {
   width: 65%;
   height: 100%;
-  z-index: 3;
+  /* z-index: 3; */
   /* overflow: hidden; */
   position: relative;
 }

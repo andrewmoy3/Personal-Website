@@ -63,7 +63,6 @@ const Card = ({
       document.documentElement.style.setProperty("--scale-x", `${scaleX}`);
       document.documentElement.style.setProperty("--scale-y", `${scaleY}`);
 
-      // console.log(currentX, currentY);
       //change z-index of the card to 10
       card.style.zIndex = 10;
       //change all elements with class card to zindex 1
