@@ -201,4 +201,32 @@ cards.push({
   github: "https://github.com/swat-sccs/airpool-v2",
 });
 
-export default cards;
+// put cards you want across first row, across second row, then
+// across first row of page 2, second row of page 2, etc.
+const horizontalOrder = [0, 1, 2, 3, 5, 4, 6, 7, 8];
+// take horizontal order and remap to vertical order
+const order = [];
+const n = horizontalOrder.length;
+const groupSize = 6;
+const numFullGroups = Math.floor(n / groupSize);
+// Loop through each full group
+for (let group = 0; group < numFullGroups; group++) {
+  let idx = groupSize * group;
+  order.push(cards[horizontalOrder[idx]]);
+  order.push(cards[horizontalOrder[idx + 3]]);
+  order.push(cards[horizontalOrder[idx + 1]]);
+  order.push(cards[horizontalOrder[idx + 4]]);
+  order.push(cards[horizontalOrder[idx + 2]]);
+  order.push(cards[horizontalOrder[idx + 5]]);
+}
+
+// add remaining cards
+const remaining = n % groupSize;
+if (remaining > 0) {
+  let startIdx = numFullGroups * groupSize;
+  for (let i = 0; i < remaining; i++) {
+    order.push(cards[horizontalOrder[startIdx + i]]);
+  }
+}
+
+export default order;
