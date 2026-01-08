@@ -12,44 +12,50 @@ import geothermal from "./assets/geothermal.png";
 import pulp from "./assets/pulp.png";
 import certara from "./assets/certara.png";
 import react from "./assets/react.jpg";
+import solar from "./assets/solar.jpg";
+import air_poll from "./assets/air_pollution.jpg";
+import chest from "./assets/chest.png";
 
 let cards = [];
 
 cards.push({
   name: "Solar Power Generation Shape Analysis",
-  description: "",
+  description:
+    "This project uses unsupervised learning to discover hidden patterns in daily solar power generation shapes across the United States, and then uses supervised learning topredict those patterns using independent weather features. A full pipeline involving data collection, data cleaning, and exploratory data analysis is included as part of the project. Specific techniques include dimensionality reduction (PCA, t-SNE), clustering (k-means, DBSCAN, hierarchical), regression, and classification. \n This project was completed as part of the 'Introduction to Data Analytics' (DSAN 5000) curriculum at Georgetown University. A literature review, full written report, technical walkthrough, code documentation, and GitHub repository can be found at the website below.",
   technologies: [
     {
       name: "Python",
       image: python,
     },
   ],
-  image: certara,
+  image: solar,
   github: "",
 });
 
 cards.push({
   name: "Statistical Analysis of Air Pollution Causes",
-  description: "",
+  description:
+    "This project uses probabilistic and statistical methods to analyze a variety of factors that contribute to air pollution. Weather patterns, human activity, city demographics, and seasonal trends are analyzed against three major air pollutants to determine the most correlated factors and predict future pollution levels. Additionally, these factors are examined across ten major U.S. cities to explore the differences in behavior of individual cities and regions. \nThis project was completed as part of the 'Probabilistic Modeling and Statistical Computing' (DSAN 5100) curriculum at Georgetown University. A written report, slide deck, and GitHub repository can be found at the website below.",
   technologies: [
     {
       name: "Python",
       image: python,
     },
   ],
-  image: certara,
+  image: air_poll,
   github: "",
 });
 cards.push({
   name: "Multi-Label Classification of Chest X-Ray Images",
-  description: "",
+  description:
+    "This project uses deep learning techniques and multi-label classification to detect thoracic diseases from chest X-ray images. The project uses convolutional neural networks and transformers, and primarily uses transfer learning on pretrained models. Custom architectures are designed for proof of concept. The project aims to replicate previous work performed by Wang, Xiaosong, et al. in 2017 ('ChestX-ray8: Hospital-Scale Chest X-Ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases'). \nThis project was completed as part of the 'Neural Networks and Deep Learning' (DSAN 6600) curriculum at Georgetown University. A written report, slide deck, code documentation, and GitHub repository can be found at the website below.",
   technologies: [
     {
       name: "Python",
       image: python,
     },
   ],
-  image: certara,
+  image: chest,
   github: "",
 });
 cards.push({
