@@ -64,7 +64,7 @@ const Card = ({
       document.documentElement.style.setProperty("--scale-y", `${scaleY}`);
 
       //change z-index of the card to 10
-      card.style.zIndex = 10;
+      card.style.zIndex = 100;
       //change all elements with class card to zindex 1
       const cards = document.getElementsByClassName("card");
       for (const cd of cards) {
