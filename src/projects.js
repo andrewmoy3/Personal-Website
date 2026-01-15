@@ -1,20 +1,4 @@
-import airpool from "./assets/Airpool.png";
-import spotlyte from "./assets/spotlyte.png";
-import asia from "./assets/asia.jpeg";
-import prisma from "./assets/prisma.png";
-import python from "./assets/python.png";
-import google from "./assets/google.webp";
-import baseball from "./assets/swat_baseball.png";
-import opencv from "./assets/opencv.png";
-import pandas from "./assets/pandas.png";
-import bs from "./assets/bs.jpg";
-import geothermal from "./assets/geothermal.png";
-import pulp from "./assets/pulp.png";
-import certara from "./assets/certara.png";
-import react from "./assets/react.jpg";
-import solar from "./assets/solar.jpg";
-import air_poll from "./assets/air_pollution.jpg";
-import chest from "./assets/chest.png";
+import { images } from "./assets/logos";
 
 let cards = [];
 
@@ -25,11 +9,11 @@ cards.push({
   technologies: [
     {
       name: "Python",
-      image: python,
+      image: images.python,
     },
   ],
-  image: solar,
-  github: "https://github.com/dsan-5000/fall-2025-project-andrewmoy3",
+  image: images.solar,
+  github: "https://github.com/andrewmoy3/DSAN_5000_final_project",
   link: "https://andrewmoy.georgetown.domains/dsan5000/final_project/",
 });
 
@@ -40,10 +24,10 @@ cards.push({
   technologies: [
     {
       name: "Python",
-      image: python,
+      image: images.python,
     },
   ],
-  image: air_poll,
+  image: images.airPoll,
   github: "https://github.com/andrewmoy3/DSAN_5100_final_project",
   link: "https://andrewmoy.georgetown.domains/dsan5100/final_project/",
 });
@@ -54,28 +38,28 @@ cards.push({
   technologies: [
     {
       name: "Python",
-      image: python,
+      image: images.python,
     },
   ],
-  image: chest,
+  image: images.chest,
   github: "https://github.com/andrewmoy3/DSAN_6600_final_project",
   link: "https://andrewmoy.georgetown.domains/dsan6600/final_project/",
 });
 cards.push({
   name: "Geoexchange System Optimization",
   description:
-    "\tThis project was designed as the senior thesis for Swarthmore College's engineering program. The goal of the project was to optimize Swarthmore's newly built geoexchange system to minimize energy use and cost. It involved the analysis of potential upgrades to building envelope, such as insulation and window replacement, to reduce heat leakages, thereby saving energy. Through the use of Python, integer linear programming, and the PuLP Python package, the most cost effective upgrades were identified and recommended to the school to be constructed. The project was designed in collaboration with the professors, administration, architects, and engineers involved with the 'To Zero By Thirty-Five' project. The project is still in progress, and the code, results, and final presentation will be made available at the end of the Spring 2025 semester.",
+    "\tThis project was designed as the senior thesis for Swarthmore College's engineering program. Swarthmore's newly built geoexchange system involved many building envelope upgrades intended to reduce heat leakages and thereby reduce energy use. This project aims to minimize energy use and cost by identifying Through the use of Python, integer linear programming, and the PuLP Python package, the most cost effective upgrades were identified and recommended to the school to be constructed. The project was designed in collaboration with the professors, administration, architects, and engineers involved with the 'To Zero By Thirty-Five' project. The project is still in progress, and the code, results, and final presentation will be made available at the end of the Spring 2025 semester.",
   technologies: [
     {
       name: "Python",
-      image: python,
+      image: images.python,
     },
     {
       name: "PuLP",
-      image: pulp,
+      image: images.pulp,
     },
   ],
-  image: geothermal,
+  image: images.geothermal,
   github: "",
 });
 cards.push({
@@ -85,23 +69,23 @@ cards.push({
   technologies: [
     {
       name: "Python",
-      image: python,
+      image: images.python,
     },
     {
       name: "BeautifulSoup",
-      image: bs,
+      image: images.bs,
       width: "25px",
     },
     {
       name: "Pandas",
-      image: pandas,
+      image: images.pandas,
     },
     {
       name: "OpenCV",
-      image: opencv,
+      image: images.opencv,
     },
   ],
-  image: baseball,
+  image: images.baseball,
   github: "https://github.com/andrewmoy3/swat_spray_charts",
 });
 cards.push({
@@ -110,10 +94,10 @@ cards.push({
   technologies: [
     {
       name: "React",
-      image: react,
+      image: images.react,
     },
   ],
-  image: certara,
+  image: images.certara,
   github: "",
 });
 cards.push({
@@ -123,26 +107,22 @@ cards.push({
   technologies: [
     {
       name: "Firebase",
-      image:
-        "https://user-images.githubusercontent.com/25181517/189716855-2c69ca7a-5149-4647-936d-780610911353.png",
+      image: images.firebase,
     },
     {
       name: "HTML",
-      image:
-        "https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png",
+      image: images.html,
     },
     {
       name: "CSS",
-      image:
-        "https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png",
+      image: images.css,
     },
     {
       name: "JavaScript",
-      image:
-        "https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png",
+      image: images.js,
     },
   ],
-  image: asia,
+  image: images.asia,
   link: "https://history-game-dev---swatworks.web.app/",
   github: "https://github.com/andrewmoy3/SwatWorks-Web-Games/tree/main",
 });
@@ -153,34 +133,30 @@ cards.push({
   technologies: [
     {
       name: "Figma",
-      image:
-        "https://user-images.githubusercontent.com/25181517/189715289-df3ee512-6eca-463f-a0f4-c10d94a06b2f.png",
+      image: images.figma,
     },
     {
       name: "Swift",
-      image:
-        "https://user-images.githubusercontent.com/25181517/121406389-6267a300-c95e-11eb-8d67-f1e22afe8aea.png",
+      image: images.swift,
     },
     {
       name: "Google Cloud",
-      image: google,
+      image: images.google,
     },
     {
       name: "Prisma",
-      image: prisma,
+      image: images.prisma,
     },
     {
       name: "Next.js",
-      image:
-        "https://github.com/marwin1991/profile-technology-icons/assets/136815194/5f8c622c-c217-4649-b0a9-7e0ee24bd704",
+      image: images.nextjs,
     },
     {
       name: "JavaScript",
-      image:
-        "https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png",
+      image: images.js,
     },
   ],
-  image: spotlyte,
+  image: images.spotlyte,
   link: "https://spotlyteapp.com/",
   github: "https://github.com/zzanehip/Spotlyte",
 });
@@ -191,21 +167,18 @@ cards.push({
   technologies: [
     {
       name: "Next.js",
-      image:
-        "https://github.com/marwin1991/profile-technology-icons/assets/136815194/5f8c622c-c217-4649-b0a9-7e0ee24bd704",
+      image: images.nextjs,
     },
     {
       name: "Docker",
-      image:
-        "https://user-images.githubusercontent.com/25181517/117207330-263ba280-adf4-11eb-9b97-0ac5b40bc3be.png",
+      image: images.docker,
     },
     {
       name: "React",
-      image:
-        "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png",
+      image: images.react,
     },
   ],
-  image: airpool,
+  image: images.airpool,
   link: "https://airpool.sccs.swarthmore.edu/",
   github: "https://github.com/swat-sccs/airpool-v2",
 });

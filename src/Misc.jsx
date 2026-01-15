@@ -3,8 +3,9 @@ import "./Misc.css";
 const Misc = () => {
   const georgetownSite = (
     <>
-      I also created a website dedicated specifically to my graduate school
-      coursework at Georgetown University, which can be found at{" "}
+      A website dedicated specifically to my graduate school coursework at
+      Georgetown University, containing final project reports, course
+      descriptions, and course syllabi, can be found at{" "}
       <a
         href="https://andrewmoy.georgetown.domains/"
         target="_blank"
@@ -12,8 +13,7 @@ const Misc = () => {
       >
         https://andrewmoy.georgetown.domains/
       </a>
-      . This site contains final project reports, course descriptions, and
-      course syllabi.
+      .
     </>
   );
 
@@ -49,6 +49,7 @@ const Misc = () => {
     "Phi Beta Kappa Honor Society",
     "Swarthmore College Varsity Baseball Team (Co-Captain)",
     "Swarthmore College Computer Society",
+    "Swarthmore College Engineering Sibling Program",
   ];
   const technologies = [
     "Python",

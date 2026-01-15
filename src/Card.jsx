@@ -124,16 +124,6 @@ const Card = ({
                   </div>
                 </div>
                 <div id="links">
-                  <a
-                    href={github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    Github
-                    <hr id="projectLine"></hr>
-                  </a>
-
                   {link && (
                     <a
                       href={link}
@@ -145,6 +135,15 @@ const Card = ({
                       <hr id="projectLine"></hr>
                     </a>
                   )}
+                  <a
+                    href={github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Github
+                    <hr id="projectLine"></hr>
+                  </a>
                 </div>
               </div>
             </div>
