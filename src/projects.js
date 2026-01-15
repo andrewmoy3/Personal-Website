@@ -21,7 +21,7 @@ let cards = [];
 cards.push({
   name: "Solar Power Generation Shape Analysis",
   description:
-    "This project uses unsupervised learning to discover hidden patterns in daily solar power generation shapes across the United States, and then uses supervised learning topredict those patterns using independent weather features. A full pipeline involving data collection, data cleaning, and exploratory data analysis is included as part of the project. Specific techniques include dimensionality reduction (PCA, t-SNE), clustering (k-means, DBSCAN, hierarchical), regression, and classification. \n This project was completed as part of the 'Introduction to Data Analytics' (DSAN 5000) curriculum at Georgetown University. A literature review, full written report, technical walkthrough, code documentation, and GitHub repository can be found at the website below.",
+    "\tThis project uses unsupervised learning to discover hidden patterns in daily solar power generation shapes across the United States, and then uses supervised learning to predict those patterns using independent weather features. A full pipeline involving data collection, data cleaning, and exploratory data analysis is included as part of the project. Specific techniques include dimensionality reduction (PCA, t-SNE), clustering (k-means, DBSCAN, hierarchical), regression, and classification. \n\tThis project was completed as part of the 'Introduction to Data Analytics' (DSAN 5000) curriculum at Georgetown University. A literature review, full written report, technical walkthrough, code documentation, and GitHub repository can be found at the website below.",
   technologies: [
     {
       name: "Python",
@@ -29,13 +29,14 @@ cards.push({
     },
   ],
   image: solar,
-  github: "",
+  github: "https://github.com/dsan-5000/fall-2025-project-andrewmoy3",
+  link: "https://andrewmoy.georgetown.domains/dsan5000/final_project/",
 });
 
 cards.push({
   name: "Statistical Analysis of Air Pollution Causes",
   description:
-    "This project uses probabilistic and statistical methods to analyze a variety of factors that contribute to air pollution. Weather patterns, human activity, city demographics, and seasonal trends are analyzed against three major air pollutants to determine the most correlated factors and predict future pollution levels. Additionally, these factors are examined across ten major U.S. cities to explore the differences in behavior of individual cities and regions. \nThis project was completed as part of the 'Probabilistic Modeling and Statistical Computing' (DSAN 5100) curriculum at Georgetown University. A written report, slide deck, and GitHub repository can be found at the website below.",
+    "\tThis project uses probabilistic and statistical methods to analyze a variety of factors that contribute to air pollution. Weather patterns, human activity, city demographics, and seasonal trends are analyzed against three major air pollutants to determine the most correlated factors and predict future pollution levels. Additionally, these factors are examined across ten major U.S. cities to explore the differences in behavior of individual cities and regions. \n\tThis project was completed as part of the 'Probabilistic Modeling and Statistical Computing' (DSAN 5100) curriculum at Georgetown University. A written report, slide deck, and GitHub repository can be found at the website below.",
   technologies: [
     {
       name: "Python",
@@ -43,12 +44,13 @@ cards.push({
     },
   ],
   image: air_poll,
-  github: "",
+  github: "https://github.com/andrewmoy3/DSAN_5100_final_project",
+  link: "https://andrewmoy.georgetown.domains/dsan5100/final_project/",
 });
 cards.push({
   name: "Multi-Label Classification of Chest X-Ray Images",
   description:
-    "This project uses deep learning techniques and multi-label classification to detect thoracic diseases from chest X-ray images. The project uses convolutional neural networks and transformers, and primarily uses transfer learning on pretrained models. Custom architectures are designed for proof of concept. The project aims to replicate previous work performed by Wang, Xiaosong, et al. in 2017 ('ChestX-ray8: Hospital-Scale Chest X-Ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases'). \nThis project was completed as part of the 'Neural Networks and Deep Learning' (DSAN 6600) curriculum at Georgetown University. A written report, slide deck, code documentation, and GitHub repository can be found at the website below.",
+    "\tThis project uses deep learning techniques and multi-label classification to detect thoracic diseases from chest X-ray images. The project uses convolutional neural networks and transformers, and primarily uses transfer learning on pretrained models. Custom architectures are designed for proof of concept. The project aims to replicate previous work performed by Wang, Xiaosong, et al. in 2017 ('ChestX-ray8: Hospital-Scale Chest X-Ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases'). \n\tThis project was completed as part of the 'Neural Networks and Deep Learning' (DSAN 6600) curriculum at Georgetown University. A written report, slide deck, code documentation, and GitHub repository can be found at the website below.",
   technologies: [
     {
       name: "Python",
@@ -56,12 +58,13 @@ cards.push({
     },
   ],
   image: chest,
-  github: "",
+  github: "https://github.com/andrewmoy3/DSAN_6600_final_project",
+  link: "https://andrewmoy.georgetown.domains/dsan6600/final_project/",
 });
 cards.push({
   name: "Geoexchange System Optimization",
   description:
-    "This project was designed as the senior thesis for Swarthmore College's engineering program. The goal of the project was to optimize Swarthmore's newly built geoexchange system to minimize energy use and cost. It involved the analysis of potential upgrades to building envelope, such as insulation and window replacement, to reduce heat leakages, thereby saving energy. Through the use of Python, integer linear programming, and the PuLP Python package, the most cost effective upgrades were identified and recommended to the school to be constructed. The project was designed in collaboration with the professors, administration, architects, and engineers involved with the 'To Zero By Thirty-Five' project. The project is still in progress, and the code, results, and final presentation will be made available at the end of the Spring 2025 semester.",
+    "\tThis project was designed as the senior thesis for Swarthmore College's engineering program. The goal of the project was to optimize Swarthmore's newly built geoexchange system to minimize energy use and cost. It involved the analysis of potential upgrades to building envelope, such as insulation and window replacement, to reduce heat leakages, thereby saving energy. Through the use of Python, integer linear programming, and the PuLP Python package, the most cost effective upgrades were identified and recommended to the school to be constructed. The project was designed in collaboration with the professors, administration, architects, and engineers involved with the 'To Zero By Thirty-Five' project. The project is still in progress, and the code, results, and final presentation will be made available at the end of the Spring 2025 semester.",
   technologies: [
     {
       name: "Python",
@@ -78,7 +81,7 @@ cards.push({
 cards.push({
   name: "Spray Chart Web Scraper",
   description:
-    "This project involves a Python script that scrapes data from the game logs of Division 3 baseball teams to produce spray charts for each individual player. The spray charts are then used to analyze the player's hitting tendencies and can be used to help coaches make decisions about how to position their fielders. This project was inspired by my involvement with the Swarthmore College baseball team; despite a season ending injury during my senior season, I wanted to find a way to contribute to the team without being on the field.",
+    "\tThis project involves a Python script that scrapes data from the game logs of Division 3 baseball teams to produce spray charts for each individual player. The spray charts are then used to analyze the player's hitting tendencies and can be used to help coaches make decisions about how to position their fielders. This project was inspired by my involvement with the Swarthmore College baseball team; despite a season ending injury during my senior season, I wanted to find a way to contribute to the team without being on the field.",
   technologies: [
     {
       name: "Python",
@@ -116,7 +119,7 @@ cards.push({
 cards.push({
   name: "SwatWorks Web Games",
   description:
-    "This project was created as part of a winter internship for a history professor at St. John's University during the winter of 2022-2023, as part of Swarthmore College's 'SwatWorks' program. A real-time multiplayer web interface was created to implement a set of educational game scripts designed by the professor. The implementation allows the professor to monitor the current status of each player and easily process actions. It was created with vanilla HTML, CSS, and JavaScript, and was my first experience with web development.",
+    "\tThis project was created as part of a winter internship for a history professor at St. John's University during the winter of 2022-2023, as part of Swarthmore College's 'SwatWorks' program. A real-time multiplayer web interface was created to implement a set of educational game scripts designed by the professor. The implementation allows the professor to monitor the current status of each player and easily process actions. It was created with vanilla HTML, CSS, and JavaScript, and was my first experience with web development.",
   technologies: [
     {
       name: "Firebase",
@@ -146,7 +149,7 @@ cards.push({
 cards.push({
   name: "Spotlyte",
   description:
-    "Spotlyte is an iOS app that was created to make it easier for college students to host, share, and discover events on campus.  From club meetings to career fairs to private movie nights with friends, Spotlyte centralizes all the events on campus in one place. Spotlyte allows both students and organizations to create events, and will recommend events to you based on your interests and friends.",
+    "\tSpotlyte is an iOS app that was created to make it easier for college students to host, share, and discover events on campus.  From club meetings to career fairs to private movie nights with friends, Spotlyte centralizes all the events on campus in one place. Spotlyte allows both students and organizations to create events, and will recommend events to you based on your interests and friends.",
   technologies: [
     {
       name: "Figma",
@@ -184,7 +187,7 @@ cards.push({
 cards.push({
   name: "Airpool",
   description:
-    "Airpool is a web app that was created by the Swarthmore College Computer Society to help Swarthmore students find people to carpool with to and from the Philadelphia airport. Its intention was to allow students to reduce the cost of ride-sharing services by splitting the cost with others. ",
+    "\tAirpool is a web app that was created by the Swarthmore College Computer Society to help Swarthmore students find people to carpool with to and from the Philadelphia airport. Its intention was to allow students to reduce the cost of ride-sharing services by splitting the cost with others. ",
   technologies: [
     {
       name: "Next.js",

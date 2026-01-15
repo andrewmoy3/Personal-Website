@@ -102,7 +102,7 @@
   animation: scroll-title 3s linear infinite;
 }
 .cardtitle-text {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   /* max-width: max-content; */
 }
 
@@ -165,113 +165,130 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* position: relative; */
   overflow: hidden; /* Hide overflowing content */
 }
-.card-back h1 {
+#titleHeader {
   width: 75%;
-  white-space: nowrap;
-  font-size: 1em;
+  height: 10%;
   display: flex;
   justify-content: center;
-  margin: 0.4em;
-  margin-bottom: 2px;
+  white-space: nowrap;
+  margin: 0.1rem;
+  margin-bottom: 0.3rem;
   padding: 0;
-  color: #435c5f;
-  /* text-decoration: underline; */
 }
+.card-back h1 {
+  font-size: clamp(0.25rem, 2vw, 0.5rem);
+  color: #435c5f;
+}
+.card-back p {
+  /* font-size: 0.35vw; */
+  font-size: 0.25rem;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  white-space: pre-wrap;
+  tab-size: 6;
+  width: 100%;
+}
+.card-back #detailsDiv {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-start;
+  /* padding-top: 10px; */
+  /* font-size: 5px; */
+  font-size: 1rem;
+}
+.vertical-bar {
+  /* width: 2rem; Adjust the width as needed */
+  flex: 0 0 0.25rem;
+  height: 100%; /* Set the height to fill the container */
+  background-color: #435c5f; /* Set the background color as desired */
+  margin: 0 1rem; /* Adjust the margin to control the space around the bar */
+}
+
+.card-back #projectContent {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  width: calc(100% - 4.25rem);
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  /* display: grid; */
+  grid-template-rows: repeat(10, 1fr); /* Create 5 rows with equal height */
+  grid-template-columns: calc(100% - 2rem);
+  grid-gap: 1px;
+  height: 100%;
+}
+
 .card-back h2 {
-  /* font: italic small-caps bold 16px/1.5 "Times New Roman", serif; */
-  font-variant: small-caps;
-  font-size: 6px;
+  font: italic small-caps bold 0.4rem "Times New Roman", serif;
   color: #333;
   align-self: flex-start;
   padding: 0px;
   margin: 0px;
 }
-.card-back p {
-  width: 90%;
-  /* font-size: 0.35vw; */
-  font-size: 0.8em;
-  margin: 0;
-  padding: 0;
-  text-align: left;
+
+.card-back #descriptionDiv {
+  grid-row: 2 / 7;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  scrollbar-width: none; /* Firefox */
 }
+
+#descriptionDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.card-back #techContent {
+  grid-row: 8 / 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* gap: 1em; */
+}
+
+.card-back #techs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 0.25rem;
+}
+
 .card-back #links {
+  grid-row: 10;
+  padding: none;
+  margin: 0;
   display: flex;
   justify-content: space-evenly;
-  font-size: large;
+  font-size: 1rem;
   align-self: center;
-  padding: 5px;
-  margin-right: 20px;
-  grid-row: 5; /* Place in row 5 */
-
+  flex: 0 0 auto;
+  width: 100%;
   /* align-self: flex-end; */
   /* position: relative; */
   /* bottom: -5em; */
 }
 .card-back a {
   width: 75%;
-  font-size: 0.2em;
+  font-size: 0.3rem;
   margin: 0;
   padding: 0;
   color: #333;
 }
 
-.card-back #detailsDiv {
-  width: 100%;
-  height: 70%;
-  display: flex;
-  justify-content: flex-start;
-  padding-top: 10px;
-  font-size: 5px;
-}
-.vertical-bar {
-  width: 2px; /* Adjust the width as needed */
-  height: 100%; /* Set the height to fill the container */
-  background-color: #435c5f; /* Set the background color as desired */
-  margin: 0 10px; /* Adjust the margin to control the space around the bar */
-}
-
-.card-back #projectContent {
-  /* display: flex; */
-  display: grid;
-  grid-template-rows: repeat(5, 1fr); /* Create 5 rows with equal height */
-  /* grid-gap: 10px; Add some gap between the rows and columns */
-  /* flex-direction: column;
-  justify-content: space-between; */
-  width: 100%;
-  height: 100%;
-}
-
-.card-back #descriptionDiv {
-  grid-row: 1 / span 3;
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.card-back #descriptionDiv::-webkit-scrollbar {
-  display: none;
-}
-.card-back #techContent {
-  grid-row: 4 / span 1; /* Place in row 1 and 2 */
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.card-back #techs {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 .card-back #techs img {
-  width: 2em;
+  width: 0.6rem;
   height: auto;
   border-radius: 0px;
+  padding: none;
+  margin: 0px;
 }
 
 .card-back #projectLine {

@@ -22,21 +22,25 @@
   height: 80%;
 }
 
-#misc h1 {
+#misc h1,
+h2 {
   color: #435c5f;
+  font-weight: 400;
 }
-#misc h2 {
-  color: white;
-}
-
 #misc h1 {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: 300;
 }
 #misc h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   line-height: 1.1;
   font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+#misc h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 #misc .line {
@@ -89,5 +93,45 @@
 }
 
 #misc ul {
-  padding: 0;
+  list-style-position: inside;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+#misc #miscContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 3rem;
+}
+
+/* #misc  */
+
+/* Different sections */
+#misc #GUsite {
+  display: flex;
+  flex-direction: column;
+}
+
+.miscSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+#misc .miscSection .line {
+  width: 50%;
+  margin: 0 0 1rem 0;
+}
+
+#misc p {
+  text-align: left;
+}
+
+#courseLists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
 }

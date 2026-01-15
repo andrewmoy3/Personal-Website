@@ -97,20 +97,19 @@ const Card = ({
             <img src={image} alt={name}></img>
           </div>
           <div className="card-back">
-            {/* Change Here */}
-            <h1>{name}</h1>
-            {/* <hr id="projectLine"></hr> */}
-
+            <div id="titleHeader">
+              <h1>{name}</h1>
+            </div>
             <div id="detailsDiv">
               <div className="vertical-bar"></div>
 
               <div id="projectContent">
+                <h2>Description</h2>
                 <div id="descriptionDiv">
-                  <h2>Description</h2>
                   <p>{description}</p>
                 </div>
+                <h2>Technologies</h2>
                 <div id="techContent">
-                  <h2>Technologies Used</h2>
                   <div id="techs">
                     {technologies.map((technology, index) => (
                       <div key={index}>

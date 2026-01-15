@@ -7,16 +7,6 @@
   overflow: hidden;
 }
 
-#contact h1 {
-  font-size: 3em;
-  font-weight: 300;
-}
-#contact h2 {
-  font-size: 1.5em;
-  line-height: 1.1;
-  font-weight: 400;
-}
-
 #contact .line {
   width: 75%;
 }

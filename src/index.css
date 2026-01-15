@@ -15,6 +15,7 @@
 
 html {
   height: 100%;
+  font-size: clamp(4px, 1.2vw, 32px);
 }
 a {
   font-weight: 500;
@@ -122,4 +123,14 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+#h2 {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 400;
 }
