@@ -76,6 +76,7 @@ cards.push({
   ],
   image: images.geothermal,
   github: "https://github.com/andrewmoy3/E90",
+  link: "https://works.swarthmore.edu/theses/967/",
 });
 cards.push({
   name: "Spray Chart Web Scraper",
